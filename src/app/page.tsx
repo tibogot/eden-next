@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const servicesRef = useRef<HTMLElement>(null);
   const scaleImgRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -27,6 +28,20 @@ export default function Home() {
         });
 
         gsap.ticker.lagSmoothing(0);
+      }
+
+      // About section sticky effect
+      const aboutSection = aboutRef.current;
+      if (aboutSection) {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: aboutSection,
+            start: "top top",
+            end: "bottom top",
+            pin: true,
+            pinSpacing: false,
+          },
+        });
       }
 
       // Existing clip-path animations
@@ -169,7 +184,7 @@ export default function Home() {
 
       <HorizontalScrollCards />
 
-      <div className="h-screen w-full">
+      <div ref={aboutRef} className="h-screen w-full">
         <div className="relative h-full bg-[url('/images/The-garden.avif')] bg-cover bg-center bg-no-repeat p-4 py-12 md:px-8">
           {/* Background gradient overlay - behind the text */}
           <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
@@ -202,7 +217,7 @@ export default function Home() {
         {/* Services Section with clip-path animation */}
         <section
           ref={servicesRef}
-          className="space-y-20 px-4 py-10 md:space-y-50 md:px-8 md:py-20"
+          className="space-y-20 px-4 py-10 md:space-y-50 md:px-8 md:py-20 bg-[#FAF3EB] "
         >
           {/* Card 1 - Small, Left */}
           <div className="flex w-full flex-col md:flex-row md:justify-start">
