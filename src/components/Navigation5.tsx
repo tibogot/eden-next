@@ -286,7 +286,7 @@ const Menu = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className="menu-overlay fixed top-0 left-0 z-50 h-screen w-full bg-lime-900 md:hidden"
+        className="menu-overlay fixed top-0 left-0 z-50 h-[100svh] w-full bg-lime-900 md:hidden"
         style={{
           clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         }}
