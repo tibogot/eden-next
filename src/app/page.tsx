@@ -187,7 +187,7 @@ export default function Home() {
       <HorizontalScrollCards />
 
       <div ref={aboutRef} className="h-screen w-full">
-        <div className="relative h-full bg-[url('/images/The-garden.avif')] bg-cover bg-center bg-no-repeat p-4 py-12 md:px-8">
+        <div className="relative h-full  bg-cover bg-center bg-no-repeat p-4 py-12 md:px-8">
           {/* Background gradient overlay - behind the text */}
           <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
 
