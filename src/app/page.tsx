@@ -136,7 +136,7 @@ export default function Home() {
     },
   );
   return (
-    <div className="">
+    <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
       <section className="h-[100svh] w-full overflow-hidden">
         <div className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1630305106122-80b9ace010c7?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Intro Section */}
-      <section className="flex flex-col bg-white px-4 pt-10 md:px-8 md:pt-20">
+      <section className="flex flex-col px-4 pt-10 md:px-8 md:pt-20">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-6xl">
             <span className="font-PPRegular">Experience Paradise </span>
@@ -170,14 +170,39 @@ export default function Home() {
       <HorizontalScrollCards />
 
       <div className="h-screen w-full">
-        <div className="relative h-full bg-[url('/images/The-garden.avif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="relative h-full bg-[url('/images/The-garden.avif')] bg-cover bg-center bg-no-repeat p-4 py-12 md:px-8">
+          {/* Background gradient overlay - behind the text */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+
+          {/* Content sits above overlay */}
+          <div className="relative z-10">
+            <h6 className="font-NHD text-white">ABOUT</h6>
+
+            <div className="mt-10 flex flex-col md:flex-row">
+              <div className="left w-full md:w-1/2">
+                <h1 className="font-PPItalic text-4xl leading-tight text-white md:text-6xl">
+                  A New Standard of
+                  <br />
+                  Living at Eden
+                </h1>
+              </div>
+              <div className="right w-full md:w-1/2 md:pl-20">
+                <p className="font-NHD w-3/4 text-lg text-white md:text-xl">
+                  Experience the best of Abuja's nightlife at Eden Park &
+                  Garden. From live music to delicious food and refreshing
+                  drinks, we offer a unique and unforgettable experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="relative">
         {/* Services Section with clip-path animation */}
         <section
           ref={servicesRef}
-          className="space-y-20 bg-white px-4 py-10 md:space-y-50 md:px-8 md:py-20"
+          className="space-y-20 px-4 py-10 md:space-y-50 md:px-8 md:py-20"
         >
           {/* Card 1 - Small, Left */}
           <div className="flex w-full flex-col md:flex-row md:justify-start">
@@ -319,7 +344,7 @@ export default function Home() {
         ref={scaleImgRef}
         className="relative h-screen w-full overflow-hidden"
       >
-        <div className="absolute inset-0 flex items-center justify-center bg-white">
+        <div className="absolute inset-0 flex items-center justify-center bg-[#FAF3EB]">
           <img
             src="/images/night-life.avif"
             alt="Scaling Image"
