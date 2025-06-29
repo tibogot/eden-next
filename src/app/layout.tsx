@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import LenisProvider from "@/components/LenisProvider";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import Menu from "@/components/Navigation4";
+import Menu from "@/components/Navigation5";
 // import ScrollProgress from "@/components/ScrollProgress";
 
 const geistSans = Geist({
