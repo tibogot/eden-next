@@ -194,11 +194,21 @@ export default function Home() {
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
+            priority
           />
 
           {/* Background gradient overlay - behind the text */}
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
           {/* Content sits above overlay */}
+          <div className="relative z-10 h-full w-full">
+            <div className="flex h-full w-full items-center justify-center">
+              <h1 className="font-PPItalic text-center text-4xl leading-tight text-white md:text-6xl">
+                A New Standard of
+                <br />
+                Living at Eden
+              </h1>
+            </div>
+          </div>
           {/* <div className="relative z-10">
             <h6 className="font-NHD text-white">ABOUT</h6>
 
@@ -228,6 +238,8 @@ export default function Home() {
           ref={servicesRef}
           className="space-y-20 bg-[#FAF3EB] px-4 py-10 md:space-y-50 md:px-8 md:py-20"
         >
+          <div className="font-NHD">SERVICES</div>
+
           {/* Card 1 - Small, Left */}
           <div className="flex w-full flex-col md:flex-row md:justify-start">
             <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
