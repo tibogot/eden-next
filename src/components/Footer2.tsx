@@ -6,10 +6,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#FAF3EB]">
-      <section className="h-[100svh] w-full overflow-hidden">
+      <section className="h-screen w-full overflow-hidden">
         <div className="relative flex h-full">
           {/* Info block: now in normal flow, left-aligned */}
-          <div className="font-NHD mt-8 flex flex-col gap-2 self-start px-4 text-base text-lime-900 md:mt-32 md:px-8 md:text-lg">
+          <div className="font-NHD mt-32 flex flex-col gap-4 self-start px-4 text-xl text-lime-900 md:mt-32 md:px-8">
             <nav className="flex flex-col gap-1">
               <Link href="/" className="hover:underline">
                 Home
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           {/* Decorative plant image (absolute) */}
-          <div className="absolute top-[-20%] right-[-10%] z-10">
+          <div className="absolute top-[-10%] right-[-25%] z-10 md:top-[-20%] md:right-[-10%]">
             <Image
               src="/images/plants-png.webp"
               alt="Plants decoration"
