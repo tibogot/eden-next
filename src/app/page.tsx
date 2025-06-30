@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { ArrowRight } from "@phosphor-icons/react";
 import Copy from "@/components/Copy";
 import { gsap } from "gsap";
@@ -155,7 +156,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero h-[100svh] w-full overflow-hidden">
         <div className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1630305106122-80b9ace010c7?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-          <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+          {/* <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div> */}
 
           <div className="absolute bottom-0 left-1/2 w-[90vw] -translate-x-1/2 md:w-[75vw]">
             <img src="/logo.svg" alt="Logo" className="h-auto w-full" />
@@ -187,12 +188,18 @@ export default function Home() {
       <HorizontalScrollCards />
 
       <div ref={aboutRef} className="h-screen w-full">
-        <div className="relative h-full  bg-cover bg-center bg-no-repeat p-4 py-12 md:px-8">
-          {/* Background gradient overlay - behind the text */}
-          <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+        <div className="relative h-full p-4 py-24 md:px-8">
+          <Image
+            src="/images/drone-terrain.webp"
+            alt="Drone terrain background"
+            fill
+            className="object-cover object-center"
+          />
 
+          {/* Background gradient overlay - behind the text */}
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
           {/* Content sits above overlay */}
-          <div className="relative z-10">
+          {/* <div className="relative z-10">
             <h6 className="font-NHD text-white">ABOUT</h6>
 
             <div className="mt-10 flex flex-col md:flex-row">
@@ -211,7 +218,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
