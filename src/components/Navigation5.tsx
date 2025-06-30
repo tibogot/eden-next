@@ -269,7 +269,7 @@ const Menu = () => {
             </Link>
           ))}
           <button
-            className={`font-NHD rounded-lg border px-6 py-2 font-medium transition-all duration-300 ${currentVariant.button}`}
+            className={`font-NHD rounded-lg border px-6 py-2 transition-all duration-300 ${currentVariant.button}`}
           >
             Visit Us
           </button>
@@ -296,12 +296,18 @@ const Menu = () => {
         {/* Menu Header */}
         <div className="fixed top-0 left-0 z-50 flex w-full items-center justify-between p-4">
           <div className="text-xl font-bold">
-            <Link href="/" className="flex items-center space-x-2 text-white">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                <span className="text-sm font-bold text-white">E</span>
+            <div className="flex items-center space-x-2">
+              <div>
+                <Image
+                  src="/navlogo.svg"
+                  alt="Eden Park Logo"
+                  width={40}
+                  height={40}
+                  priority
+                />
               </div>
               <span className="text-xl font-bold text-white">Eden Park</span>
-            </Link>
+            </div>
           </div>
           <button
             className="cursor-pointer rounded-lg px-4 py-2 transition-colors duration-200 hover:bg-white/10"
@@ -315,7 +321,7 @@ const Menu = () => {
         {/* Menu Content */}
         <div className="flex h-full justify-between p-4 pt-20">
           {/* Close Icon Left */}
-          <div className="flex flex-1 items-end">
+          <div className="flex items-end">
             <div
               ref={closeIconRef}
               className="cursor-pointer text-4xl font-bold text-white/60 transition-colors duration-200 hover:text-white"
