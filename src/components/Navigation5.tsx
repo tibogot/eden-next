@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import { useLenis } from "lenis/react";
@@ -239,14 +240,14 @@ const Menu = () => {
       >
         <div className="text-xl font-bold">
           <Link href="/" className="flex items-center space-x-2">
-            <div
-              className={`flex h-8 w-8 items-center justify-center rounded-lg transition-all duration-300 ${currentVariant.logoIcon}`}
-            >
-              <span
-                className={`text-sm font-bold transition-colors duration-300 ${currentVariant.logoIconText}`}
-              >
-                E
-              </span>
+            <div>
+              <Image
+                src={isHeroVariant ? "/navlogo.svg" : "/navlogo2.svg"}
+                alt="Eden Park"
+                width={40}
+                height={40}
+                priority
+              />
             </div>
             <span
               className={`text-xl font-bold transition-colors duration-300 ${currentVariant.logoText}`}
