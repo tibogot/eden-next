@@ -156,7 +156,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero h-[100svh] w-full overflow-hidden">
         <div className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1630305106122-80b9ace010c7?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-          {/* <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div> */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
 
           <div className="absolute bottom-0 left-1/2 w-[90vw] -translate-x-1/2 md:w-[75vw]">
             <img src="/logo.svg" alt="Logo" className="h-auto w-full" />
@@ -167,14 +167,16 @@ export default function Home() {
       {/* Intro Section */}
       <section className="flex flex-col px-4 pt-10 md:px-8 md:pt-20">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-6xl">
-            <span className="font-PPRegular">Experience Paradise </span>
-            <br className="md:hidden" />
-            <span className="font-PPRegular">in </span>
-            <span className="font-PPItalic">every sip </span>
-            <br />
-            <span className="font-PPRegular">and bite</span>
-          </h1>
+          <Copy>
+            <h1 className="text-4xl md:text-6xl">
+              <span className="font-PPRegular">Experience Paradise </span>
+              <br className="md:hidden" />
+              <span className="font-PPRegular">in </span>
+              <span className="font-PPItalic">every sip </span>
+              <br />
+              <span className="font-PPRegular">and bite</span>
+            </h1>
+          </Copy>
           <Copy>
             <p className="font-NHD mt-4 max-w-2xl py-4 text-lg text-stone-500 md:py-8 md:text-xl">
               Welcome to Eden Park & Garden, your ultimate destination for
@@ -232,14 +234,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative">
+      <div className="relative bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
+        <div className="wrap font-NHD w-full text-center">
+          {/* <div className=" ">SERVICES</div> */}
+          <h2 className="font-PPRegular mt-10 text-5xl text-gray-800 md:text-8xl">
+            Services
+          </h2>
+          <p className="font-NHD mx-auto mt-4 text-lg text-stone-500 md:w-1/3">
+            Step into our vibrant garden bar, where great drinks meet even
+            better company. Whether you're looking for a refreshing cocktail, a
+            cold beer.
+          </p>
+        </div>
         {/* Services Section with clip-path animation */}
-        <section
-          ref={servicesRef}
-          className="space-y-20 bg-[#FAF3EB] px-4 py-10 md:space-y-50 md:px-8 md:py-20"
-        >
-          <div className="font-NHD">SERVICES</div>
-
+        <section ref={servicesRef} className="mt-50 space-y-20 md:space-y-50">
           {/* Card 1 - Small, Left */}
           <div className="flex w-full flex-col md:flex-row md:justify-start">
             <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
@@ -393,7 +401,19 @@ export default function Home() {
           </h1>
         </div>
       </div>
-      <section className="h-screen w-full bg-red-300"></section>
+      <section className="min-h-screen bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
+        <div className="wrap font-NHD w-full text-center">
+          {/* <div className=" ">SERVICES</div> */}
+          <h2 className="font-PPRegular mt-10 text-5xl text-gray-800 md:text-8xl">
+            Services
+          </h2>
+          <p className="font-NHD mx-auto mt-4 text-lg text-stone-500 md:w-1/3">
+            Step into our vibrant garden bar, where great drinks meet even
+            better company. Whether you're looking for a refreshing cocktail, a
+            cold beer.
+          </p>
+        </div>
+      </section>
       <ReviewsCarousel />
     </div>
   );

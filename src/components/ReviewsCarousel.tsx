@@ -98,7 +98,7 @@ const ReviewsCarousel = () => {
             <p className="font-PPRegular mb-10 w-3/4 text-2xl text-white md:w-1/2 md:text-3xl/12">
               “{currentReview.text}”
             </p>
-            <p className="font-[NeueHaasDisplay-Roman] text-sm text-white/80">
+            <p className="font-NHD text-sm text-white/80">
               {currentReview.author}
             </p>
           </motion.div>
