@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { ArrowRight } from "@phosphor-icons/react";
-import Copy from "@/components/Copy";
+import Copy from "@/components/Copy2";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
