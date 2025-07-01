@@ -5,7 +5,7 @@ import Copy from "@/components/Copy";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import HorizontalScrollCards from "@/components/HorizontalScrollCards";
+import HorizontalScrollCards from "@/components/HorizontalScrollCards2";
 import Link from "next/link";
 import { useRef } from "react";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
