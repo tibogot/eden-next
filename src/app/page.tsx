@@ -10,6 +10,9 @@ import Link from "next/link";
 import { useRef } from "react";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import ManyServices from "@/components/ManyServices";
+import BlogPreview from "@/components/BlogPreview";
+import client from "@/sanityClient";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +20,26 @@ export default function Home() {
   const servicesRef = useRef<HTMLElement>(null);
   const scaleImgRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const [blogPosts, setBlogPosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      const posts = await client.fetch(
+        `*[_type == "post"]|order(_createdAt desc)[0...3]{
+          _id,
+          title,
+          slug,
+          mainImage {
+            asset->{url}
+          },
+          publishedAt,
+          body
+        }`,
+      );
+      setBlogPosts(posts);
+    }
+    fetchPosts();
+  }, []);
 
   useGSAP(
     () => {
@@ -417,6 +440,23 @@ export default function Home() {
       </section> */}
       <ManyServices />
       <ReviewsCarousel />
+      {/* Blog Previews Section */}
+      <section className="px-4 py-24 md:px-8">
+        <h2 className="font-PPItalic text-center text-4xl md:text-6xl">
+          Events
+        </h2>
+        <ul className="mt-10 flex list-none flex-col gap-8 p-0 md:flex-row md:justify-center md:gap-6">
+          {blogPosts.map((post) => (
+            <BlogPreview key={post._id} post={post} />
+          ))}
+        </ul>
+        <div className="mt-6 text-center">
+          <Link href="/blog" className="font-medium text-blue-600 underline">
+            See all blog posts
+          </Link>
+        </div>
+      </section>
+      <section className="h-screen bg-amber-500"></section>
     </div>
   );
 }
