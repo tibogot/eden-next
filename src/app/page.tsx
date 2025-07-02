@@ -9,6 +9,7 @@ import HorizontalScrollCards from "@/components/HorizontalScrollCards2";
 import Link from "next/link";
 import { useRef } from "react";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
+import ManyServices from "@/components/ManyServices";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -401,9 +402,9 @@ export default function Home() {
           </h1>
         </div>
       </div>
-      <section className="min-h-screen bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
+      {/* <section className="min-h-screen bg-[#0ed190] px-4 py-10 md:px-8 md:py-20">
         <div className="wrap font-NHD w-full text-center">
-          {/* <div className=" ">SERVICES</div> */}
+          <div className=" ">SERVICES</div>
           <h2 className="font-PPRegular mt-10 text-5xl text-gray-800 md:text-8xl">
             Services
           </h2>
@@ -413,7 +414,8 @@ export default function Home() {
             cold beer.
           </p>
         </div>
-      </section>
+      </section> */}
+      <ManyServices />
       <ReviewsCarousel />
     </div>
   );
