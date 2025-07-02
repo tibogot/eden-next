@@ -16,6 +16,7 @@ const menuLinks = [
   { path: "/about", label: "About" },
   { path: "/services", label: "Services" },
   { path: "/contact", label: "Contact" },
+  { path: "/blog", label: "Events" },
 ];
 
 const Menu = () => {
