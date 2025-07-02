@@ -321,7 +321,7 @@ const Menu = () => {
         {/* Menu Content */}
         <div className="flex h-full justify-between p-4 pt-20">
           {/* Close Icon Left */}
-          <div className="flex items-end">
+          {/* <div className="flex items-end">
             <div
               ref={closeIconRef}
               className="cursor-pointer text-4xl font-bold text-white/60 transition-colors duration-200 hover:text-white"
@@ -329,7 +329,7 @@ const Menu = () => {
             >
               <p>&#x2715;</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Navigation Links */}
           <div className="flex flex-4 flex-col pt-20" ref={menuLinksRef}>
@@ -342,7 +342,7 @@ const Menu = () => {
                   <div className="group relative">
                     <a
                       href={link.path}
-                      className="font-PPRegular block text-7xl leading-tight text-white transition-opacity hover:opacity-70 md:text-8xl"
+                      className="font-PPRegular block text-6xl leading-tight text-white transition-opacity hover:opacity-70 md:text-8xl"
                       onClick={(e) => {
                         e.preventDefault();
                         handleLinkClick(link.path);
@@ -359,7 +359,7 @@ const Menu = () => {
           {/* Showreel Right */}
           <div className="flex flex-1 items-end justify-end">
             <div ref={showreelRef} className="group cursor-pointer">
-              <p className="font-NHD text-xl font-semibold text-white transition-opacity group-hover:opacity-70 md:text-2xl">
+              <p className="font-NHD text-xl text-white transition-opacity group-hover:opacity-70 md:text-2xl">
                 Visit Us
               </p>
               <div className="mt-1 h-0.5 origin-right scale-x-0 transform bg-white transition-transform duration-300 group-hover:scale-x-100" />
