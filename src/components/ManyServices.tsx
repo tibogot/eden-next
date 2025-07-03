@@ -173,7 +173,7 @@ function Modal({ modal, services }: ModalProps) {
           className="relative h-full w-full"
           style={{
             top: `${index * -100}%`,
-            transition: "top 0.5s cubic-bezier(0.76, 0, 0.24, 1)",
+            transition: "top 0.3s cubic-bezier(0.76, 0, 0.24, 1)",
           }}
         >
           {services.map((service, idx) => (
@@ -236,7 +236,7 @@ export default function ManyServices() {
   const [modal, setModal] = useState<ModalState>({ active: false, index: 0 });
 
   return (
-    <section className="relative min-h-screen w-full bg-[#FAF3EB] px-4 py-16 md:px-8">
+    <section className="relative min-h-screen w-full bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
       {/* Title */}
       <Copy>
         <h2 className="font-PPRegular mb-4 text-center text-6xl leading-tight text-gray-800 md:text-8xl">
