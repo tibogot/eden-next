@@ -17,7 +17,7 @@ export default async function BlogPage() {
   );
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-20">
+    <main className="mx-auto max-w-4xl px-4 py-40">
       <h1 className="font-PPRegular mb-12 text-center text-4xl text-gray-800 md:text-6xl">
         Blog
       </h1>

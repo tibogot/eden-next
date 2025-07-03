@@ -26,10 +26,12 @@ export default async function BlogPostPage(props: any) {
   if (!post) return notFound();
 
   return (
-    <main style={{ maxWidth: 700, margin: "0 auto", padding: 24 }}>
-      <h1>{post.title}</h1>
+    <main className="mx-auto mt-12 mb-24 max-w-3xl rounded-2xl bg-white px-4 py-16 shadow-lg">
+      <h1 className="font-PPItalic mb-4 text-center text-4xl leading-tight text-gray-900 md:text-6xl">
+        {post.title}
+      </h1>
       {post.publishedAt && (
-        <p style={{ color: "#888", fontSize: 14 }}>
+        <p className="mb-6 text-center text-sm text-gray-400">
           {new Date(post.publishedAt).toLocaleDateString()}
         </p>
       )}
@@ -37,10 +39,10 @@ export default async function BlogPostPage(props: any) {
         <img
           src={post.mainImage.asset.url}
           alt={post.title}
-          style={{ maxWidth: "100%", borderRadius: 8 }}
+          className="mx-auto mb-8 max-h-[420px] w-full rounded-xl object-cover"
         />
       )}
-      <div style={{ color: "#444", marginTop: 16 }}>
+      <div className="prose prose-lg font-NHD mx-auto max-w-none text-gray-800">
         <PortableText value={post.body} />
       </div>
     </main>
