@@ -255,16 +255,19 @@ export default function Home() {
         </div>
       </div>
       <div className="relative bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
-        <div className="wrap font-NHD w-full text-center">
-          {/* <div className=" ">SERVICES</div> */}
-          <h2 className="font-PPRegular mt-10 text-5xl text-gray-800 md:text-8xl">
-            Services
-          </h2>
-          <p className="font-NHD mx-auto mt-4 text-lg text-stone-500 md:w-1/3">
-            Step into our vibrant garden bar, where great drinks meet even
-            better company. Whether you're looking for a refreshing cocktail, a
-            cold beer.
-          </p>
+        <div className="wrap w-full text-center">
+          <Copy>
+            <h2 className="font-PPRegular mt-10 text-5xl leading-tight text-gray-800 md:text-8xl">
+              Services
+            </h2>
+          </Copy>
+          <Copy delay={0.2}>
+            <p className="font-NHD mx-auto mt-4 text-lg text-stone-500 md:w-1/3">
+              Step into our vibrant garden bar, where great drinks meet even
+              better company. Whether you're looking for a refreshing cocktail,
+              a cold beer.
+            </p>
+          </Copy>
         </div>
         {/* Services Section with clip-path animation */}
         <section ref={servicesRef} className="mt-50 space-y-20 md:space-y-50">
@@ -438,9 +441,11 @@ export default function Home() {
       <ReviewsCarousel />
       {/* Blog Previews Section */}
       <section className="px-4 py-24 md:px-8">
-        <h2 className="font-PPItalic text-center text-4xl md:text-6xl">
-          Events
-        </h2>
+        <Copy>
+          <h2 className="font-PPItalic text-center text-4xl leading-tight md:text-6xl">
+            Events
+          </h2>
+        </Copy>
         <ul className="mt-10 flex list-none flex-col gap-8 p-0 md:flex-row md:justify-center md:gap-6">
           {blogPosts.map((post) => (
             <BlogPreview key={post._id} post={post} />

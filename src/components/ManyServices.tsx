@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import Copy from "./Copy3";
 
 interface Service {
   name: string;
@@ -237,10 +238,11 @@ export default function ManyServices() {
   return (
     <section className="relative min-h-screen w-full bg-[#FAF3EB] px-4 py-16 md:px-8">
       {/* Title */}
-      <h2 className="font-PPRegular mb-4 text-center text-6xl text-gray-800 md:text-8xl">
-        Many Services
-      </h2>
-
+      <Copy>
+        <h2 className="font-PPRegular mb-4 text-center text-6xl leading-tight text-gray-800 md:text-8xl">
+          Many Services
+        </h2>
+      </Copy>
       {/* Description */}
       <p className="font-NHD mx-auto mb-16 text-center text-lg leading-relaxed text-gray-600 md:w-1/2">
         Eden Park & Garden is a vibrant oasis in Abuja offering a unique blend

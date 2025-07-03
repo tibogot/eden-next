@@ -1,28 +1,40 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowCircleRight, ArrowCircleLeft } from "@phosphor-icons/react";
+import {
+  ArrowCircleRight,
+  ArrowCircleLeft,
+  Star,
+  StarHalf,
+  Star as StarFull,
+  Star as StarBorder,
+} from "@phosphor-icons/react";
 
-// Review data
+// Review data (add a stars property for each review)
 const reviews = [
   {
     text: "Eden is a hidden gem. The atmosphere is magical and the service is impeccable. A truly unforgettable dining experience.",
     author: "Sarah Mitchell",
+    stars: 5,
   },
   {
     text: "The garden setting creates such a unique ambiance. Every dish was a work of art. Can't wait to return!",
     author: "James Wilson",
+    stars: 4,
   },
   {
     text: "An oasis in the city. The fusion of flavors and the romantic setting make this place absolutely special.",
     author: "Emma Thompson",
+    stars: 5,
   },
   {
     text: "Exceptional cuisine in a breathtaking setting. The attention to detail is remarkable.",
     author: "Michael Chen",
+    stars: 4,
   },
   {
     text: "A dining experience that engages all your senses. The garden view and ambient lighting create pure magic.",
     author: "Isabella Rodriguez",
+    stars: 5,
   },
 ];
 
@@ -95,6 +107,26 @@ const ReviewsCarousel = () => {
             }}
             className="absolute flex w-full flex-col items-center px-8 text-center"
           >
+            {/* Star rating */}
+            <div className="mb-6 flex justify-center">
+              {Array.from({ length: 5 }).map((_, i) =>
+                i < currentReview.stars ? (
+                  <StarFull
+                    key={i}
+                    size={24}
+                    weight="fill"
+                    className="text-white drop-shadow"
+                  />
+                ) : (
+                  <StarBorder
+                    key={i}
+                    size={24}
+                    weight="regular"
+                    className="text-white"
+                  />
+                ),
+              )}
+            </div>
             <p className="font-PPRegular mb-10 w-3/4 text-2xl text-white md:w-1/2 md:text-3xl/12">
               “{currentReview.text}”
             </p>

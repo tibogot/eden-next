@@ -51,7 +51,7 @@ export default function BlogPreview({ post }: BlogPreviewProps) {
                 {post.body && <PortableText value={post.body.slice(0, 1)} />}
               </div>
             </div>
-            <span className="font-NHD mt-2 inline-block text-base text-[#0ed190]">
+            <span className="font-NHD mt-2 inline-block text-base text-lime-900">
               Read more →
             </span>
           </div>
