@@ -17,29 +17,48 @@ export default async function BlogPage() {
   );
 
   return (
-    <main style={{ maxWidth: 700, margin: "0 auto", padding: 24 }}>
-      <h1>Blog</h1>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+    <main className="mx-auto max-w-4xl px-4 py-20">
+      <h1 className="font-PPRegular mb-12 text-center text-4xl text-gray-800 md:text-6xl">
+        Blog
+      </h1>
+      <ul className="grid gap-10 md:grid-cols-2">
         {posts.map((post: any) => (
-          <li key={post._id} style={{ marginBottom: 32 }}>
-            <Link href={`/blog/${post.slug.current}`}>
-              <h2>{post.title}</h2>
+          <li
+            key={post._id}
+            className="flex flex-col overflow-hidden rounded-2xl border border-[#f3e7d8] bg-[#fff9f3] shadow-md"
+          >
+            <Link href={`/blog/${post.slug.current}`} className="block">
+              {post.mainImage && (
+                <div className="relative h-56 w-full bg-[#f3e7d8]">
+                  <img
+                    src={post.mainImage.asset.url}
+                    alt={post.title}
+                    className="h-full w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col justify-between p-6">
+                <div>
+                  <h2 className="font-PPRegular mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
+                    {post.title}
+                  </h2>
+                  {post.publishedAt && (
+                    <p className="font-NHD mb-2 text-xs text-stone-400">
+                      {new Date(post.publishedAt).toLocaleDateString()}
+                    </p>
+                  )}
+                  <div className="font-NHD mb-2 line-clamp-3 text-base text-stone-600 md:text-lg">
+                    {post.body && (
+                      <PortableText value={post.body.slice(0, 1)} />
+                    )}
+                  </div>
+                </div>
+                <span className="font-NHD mt-2 inline-block text-base text-[#0ed190]">
+                  Read more →
+                </span>
+              </div>
             </Link>
-            {post.publishedAt && (
-              <p style={{ color: "#888", fontSize: 14 }}>
-                {new Date(post.publishedAt).toLocaleDateString()}
-              </p>
-            )}
-            {post.mainImage && (
-              <img
-                src={post.mainImage.asset.url}
-                alt={post.title}
-                style={{ maxWidth: "100%", borderRadius: 8 }}
-              />
-            )}
-            <div style={{ color: "#444", marginTop: 8 }}>
-              <PortableText value={post.body.slice(0, 1)} />
-            </div>
           </li>
         ))}
       </ul>
