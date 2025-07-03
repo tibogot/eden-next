@@ -452,7 +452,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <div ref={aboutRef} className="h-screen w-full">
+      <div className="h-screen w-full">
         <div className="relative h-full p-4 py-24 md:px-8">
           <Image
             src="/images/drone-terrain.webp"
