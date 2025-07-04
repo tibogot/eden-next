@@ -271,7 +271,10 @@ const Menu = () => {
         </div>
 
         <div className="flex h-full justify-between p-4 pt-20">
-          <div className="flex flex-4 flex-col pt-20" ref={menuLinksRef}>
+          <div
+            className="flex w-full flex-col items-end pt-20 text-right"
+            ref={menuLinksRef}
+          >
             <div className="space-y-2">
               {menuLinks.map((link, index) => (
                 <div
@@ -292,15 +295,6 @@ const Menu = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="flex flex-1 items-end justify-end">
-            <div ref={showreelRef} className="group cursor-pointer">
-              <p className="font-NHD text-xl text-white transition-opacity group-hover:opacity-70 md:text-2xl">
-                Visit Us
-              </p>
-              <div className="mt-1 h-0.5 origin-right scale-x-0 transform bg-white transition-transform duration-300 group-hover:scale-x-100" />
             </div>
           </div>
         </div>
