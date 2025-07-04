@@ -178,7 +178,7 @@ export default function Home() {
   return (
     <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
-      <section className="hero h-[100svh] w-full overflow-hidden">
+      <section className="(hero) h-[100svh] w-full overflow-hidden">
         <div className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1630305106122-80b9ace010c7?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
           <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
 
