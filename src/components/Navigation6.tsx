@@ -281,7 +281,7 @@ const Menu = () => {
                   <div className="group relative">
                     <a
                       href={link.path}
-                      className="font-PPRegular block text-6xl leading-tight text-white transition-opacity hover:opacity-70 md:text-8xl"
+                      className="font-PPRegular block text-5xl leading-tight text-white transition-opacity hover:opacity-70 md:text-6xl"
                       onClick={(e) => {
                         e.preventDefault();
                         handleLinkClick(link.path);
