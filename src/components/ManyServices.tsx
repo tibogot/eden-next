@@ -206,7 +206,7 @@ function Modal({ modal, services }: ModalProps) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className="pointer-events-none fixed z-50 h-20 w-20 rounded-full bg-lime-900 mix-blend-difference"
+        className="pointer-events-none fixed z-50 h-20 w-20 rounded-full bg-lime-900"
         style={{
           left: "0px",
           top: "0px",
@@ -239,12 +239,12 @@ export default function ManyServices() {
     <section className="relative min-h-screen w-full bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
       {/* Title */}
       <Copy>
-        <h2 className="font-PPRegular mb-4 text-center text-6xl leading-tight text-gray-800 md:text-8xl">
+        <h2 className="font-PPRegular mb-4 text-center text-5xl leading-tight text-gray-800 md:text-8xl">
           Many Services
         </h2>
       </Copy>
       {/* Description */}
-      <p className="font-NHD mx-auto mb-16 text-center text-lg leading-relaxed text-gray-600 md:w-1/2">
+      <p className="font-NHD mx-auto mb-16 text-center text-lg leading-relaxed text-gray-600 md:w-1/3">
         Eden Park & Garden is a vibrant oasis in Abuja offering a unique blend
         of entertainment and relaxation. From live music and dance shows to
         thrilling football matches, there's something for everyone.

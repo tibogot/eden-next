@@ -418,7 +418,7 @@ export default function Home() {
             className="scale-image h-[50vh] w-[50vw] object-cover"
           />
         </div>
-        <div className="imgscaletxt absolute inset-0 flex flex-col items-start justify-end p-4 opacity-0 blur-2xl md:p-8">
+        <div className="imgscaletxt absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 blur-2xl md:p-8">
           <h1 className="font-PPItalic pt-10 text-6xl text-white md:pt-20 md:text-9xl">
             The Night Life
           </h1>
