@@ -271,7 +271,7 @@ const Menu = () => {
         </div>
 
         <div className="flex h-full justify-between p-4 pt-20">
-          <div className="flex flex-4 flex-col pt-20" ref={menuLinksRef}>
+          <div className="flex flex-4 flex-col pt-10" ref={menuLinksRef}>
             <div className="space-y-2">
               {menuLinks.map((link, index) => (
                 <div
