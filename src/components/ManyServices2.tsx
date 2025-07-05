@@ -20,25 +20,25 @@ const services: Service[] = [
   {
     name: "Weddings",
     href: "/weddings",
-    image: "/images/garden-1.png",
+    image: "/images/wedding-services.webp",
     color: "#f3f4f6",
   },
   {
     name: "Live Match",
     href: "/live-match",
-    image: "/images/drone-terrain.webp",
+    image: "/images/livematch-services.webp",
     color: "#fef3c7",
   },
   {
     name: "Church",
     href: "/church",
-    image: "/images/garden-2.png",
+    image: "/images/church-services.webp",
     color: "#ddd6fe",
   },
   {
-    name: "Cannoli",
-    href: "/cannoli",
-    image: "/images/plants.webp",
+    name: "Comedy Shows",
+    href: "/comedy-shows",
+    image: "/images/comedy-services.webp",
     color: "#fecaca",
   },
 ];

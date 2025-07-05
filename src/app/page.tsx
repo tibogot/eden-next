@@ -213,7 +213,7 @@ export default function Home() {
       <div ref={aboutRef} className="h-screen w-full">
         <div className="relative h-full p-4 py-24 md:px-8">
           <Image
-            src="/images/drone-terrain.webp"
+            src="/images/sticky-img.webp"
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
@@ -232,26 +232,6 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          {/* <div className="relative z-10">
-            <h6 className="font-NHD text-white">ABOUT</h6>
-
-            <div className="mt-10 flex flex-col md:flex-row">
-              <div className="left w-full md:w-1/2">
-                <h1 className="font-PPItalic text-4xl leading-tight text-white md:text-6xl">
-                  A New Standard of
-                  <br />
-                  Living at Eden
-                </h1>
-              </div>
-              <div className="right w-full md:w-1/2 md:pl-20">
-                <p className="font-NHD w-3/4 text-lg text-white md:text-xl">
-                  Experience the best of Abuja's nightlife at Eden Park &
-                  Garden. From live music to delicious food and refreshing
-                  drinks, we offer a unique and unforgettable experience.
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="relative bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
@@ -276,7 +256,7 @@ export default function Home() {
             <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
               <div className="relative h-64 w-full md:h-98">
                 <img
-                  src="https://picsum.photos/200/300?random=1"
+                  src="./images/the-bar.webp"
                   alt="Cozy Bar"
                   className="service-image absolute inset-0 h-full w-full object-cover"
                 />
@@ -310,8 +290,8 @@ export default function Home() {
             <div className="flex w-full flex-col md:w-2/3 md:flex-row md:overflow-hidden">
               <div className="relative h-64 w-full md:h-150">
                 <img
-                  src="https://picsum.photos/200/300?random=2"
-                  alt="Cocktail Lounge"
+                  src="./images/the-pools.webp"
+                  alt="pools"
                   className="service-image absolute inset-0 h-full w-full object-cover"
                 />
               </div>
@@ -344,8 +324,8 @@ export default function Home() {
             <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
               <div className="relative h-64 w-full md:h-98">
                 <img
-                  src="https://picsum.photos/200/300?random=3"
-                  alt="Cozy Bar"
+                  src="./images/the-field.webp"
+                  alt="football field"
                   className="service-image absolute inset-0 h-full w-full object-cover"
                 />
               </div>
