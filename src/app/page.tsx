@@ -270,7 +270,7 @@ export default function Home() {
           </Copy>
         </div>
         {/* Services Section with clip-path animation */}
-        <section ref={servicesRef} className="mt-50 space-y-20 md:space-y-50">
+        <section ref={servicesRef} className="mt-50 space-y-10 md:space-y-50">
           {/* Card 1 - Small, Left */}
           <div className="flex w-full flex-col md:flex-row md:justify-start">
             <div className="flex w-full flex-col md:w-1/2 md:flex-row md:overflow-hidden">
