@@ -206,7 +206,7 @@ function Modal({ modal, services }: ModalProps) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className="pointer-events-none fixed z-50 h-20 w-20 rounded-full bg-lime-900"
+        className="pointer-events-none fixed"
         style={{
           left: "0px",
           top: "0px",
@@ -219,14 +219,12 @@ function Modal({ modal, services }: ModalProps) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className="pointer-events-none fixed z-50 flex items-center justify-center rounded-full bg-black px-3 py-1 text-sm font-medium text-white"
+        className="pointer-events-none fixed z-50 flex items-center justify-center"
         style={{
           left: "0px",
           top: "0px",
         }}
-      >
-        View
-      </motion.div>
+      ></motion.div>
     </>
   );
 }
