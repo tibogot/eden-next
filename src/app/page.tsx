@@ -178,11 +178,19 @@ export default function Home() {
   return (
     <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
-      <section className="(hero) h-[100svh] w-full overflow-hidden">
-        <div className="relative flex h-full items-center justify-center bg-[url('https://images.unsplash.com/photo-1630305106122-80b9ace010c7?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-          <div className="absolute inset-0 z-0 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+      import Image from "next/image";
+      <section className="relative h-[100svh] w-full overflow-hidden">
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/hero-bg.webp"
+            alt="Hero background"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
 
-          <div className="absolute bottom-0 left-1/2 w-[90vw] -translate-x-1/2 md:w-[75vw]">
+          <div className="absolute bottom-0 left-1/2 z-20 w-[90vw] -translate-x-1/2 md:w-[75vw]">
             <img src="/logo.svg" alt="Logo" className="h-auto w-full" />
           </div>
         </div>
@@ -400,7 +408,7 @@ export default function Home() {
         </div>
         <div className="imgscaletxt absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 blur-2xl md:p-8">
           <h1 className="font-PPItalic pt-10 text-4xl text-white md:pt-20 md:text-6xl">
-            The Night Life
+            Enjoy The Night Life in Eden Garden
           </h1>
         </div>
       </div>
@@ -440,7 +448,7 @@ export default function Home() {
       <div className="h-screen w-full">
         <div className="relative h-full p-4 py-24 md:px-8">
           <Image
-            src="/images/drone-terrain.webp"
+            src="/images/sticky-img.webp"
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
@@ -448,7 +456,7 @@ export default function Home() {
           />
 
           {/* Background gradient overlay - behind the text */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-55"></div>
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">

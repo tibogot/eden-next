@@ -238,7 +238,7 @@ export default function ManyServices() {
       {/* Title */}
       <Copy>
         <h2 className="font-PPRegular mb-4 text-center text-5xl leading-tight text-gray-800 md:text-8xl">
-          Many Services
+          And many more
         </h2>
       </Copy>
       {/* Description */}
