@@ -13,6 +13,7 @@ import ManyServices from "@/components/ManyServices2";
 import BlogPreview from "@/components/BlogPreview";
 import client from "@/sanityClient";
 import { useEffect, useState } from "react";
+import BookingForm from "@/components/BookingForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -405,7 +406,7 @@ export default function Home() {
             className="scale-image h-[50vh] w-[50vw] object-cover"
           />
         </div>
-        <div className="imgscaletxt absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 blur-2xl md:p-8">
+        <div className="imgscaletxt absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
           <h1 className="font-PPItalic pt-10 text-4xl text-white md:pt-20 md:text-6xl">
             Enjoy The Night Life in Eden Garden
           </h1>
@@ -471,6 +472,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <BookingForm />
     </div>
   );
 }
