@@ -178,14 +178,13 @@ export default function Home() {
   return (
     <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
-      import Image from "next/image";
       <section className="relative h-[100svh] w-full overflow-hidden">
         <div className="relative h-full w-full">
           <Image
             src="/images/hero-bg.webp"
             alt="Hero background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             priority
           />
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
