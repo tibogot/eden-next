@@ -427,11 +427,13 @@ export default function Home() {
       <ManyServices />
       <ReviewsCarousel />
       {/* Blog Previews Section */}
-      <section className="px-4 py-24 md:px-8">
+      <section className="px-4 py-10 md:px-8 md:py-20">
         <Copy>
-          <h2 className="font-PPRegular mt-10 text-5xl leading-tight text-gray-800 md:text-8xl">
-            Events
-          </h2>
+          <div className="flex w-full flex-col items-center">
+            <h2 className="font-PPRegular text-5xl leading-tight text-gray-800 md:text-8xl">
+              Events
+            </h2>
+          </div>
         </Copy>
         <ul className="mt-20 flex list-none flex-col gap-8 p-0 md:flex-row md:justify-center md:gap-6">
           {blogPosts.map((post) => (
