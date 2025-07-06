@@ -178,7 +178,7 @@ export default function Home() {
   return (
     <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
-      <section className="relative h-[100svh] w-full overflow-hidden">
+      <section className="relative h-svh w-full overflow-hidden">
         <div className="relative h-full w-full">
           <Image
             src="/images/hero-bg.webp"

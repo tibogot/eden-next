@@ -5,7 +5,7 @@ function restaurant() {
   return (
     <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden bg-white px-4 py-10 md:px-8 md:py-10">
+      <section className="relative h-svh w-full overflow-hidden bg-white px-4 py-10 md:px-8 md:py-10">
         <Image
           src="/images/isiewu.webp"
           alt="restaurant"
@@ -35,8 +35,8 @@ function restaurant() {
               of Eden Garden
             </h2>
           </div>
-          <div className="right flex justify-end md:w-1/2">
-            <p className="mt-6 w-3/4 text-lg leading-tight text-gray-600 md:mt-0">
+          <div className="right md:flex md:w-1/2 md:justify-end">
+            <p className="mt-6 text-lg leading-tight text-gray-600 md:mt-0 md:w-3/4">
               Welcome to Eden Garden's culinary paradise, where the rich
               traditions of Nigerian cuisine meet international flavors in
               perfect harmony. Nestled in the heart of Abuja, our restaurant
