@@ -17,16 +17,13 @@ export default async function BlogPage() {
   );
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-40">
+    <main className="bg-[#FAF3EB] px-4 py-40">
       <h1 className="font-PPRegular mb-12 text-center text-4xl text-gray-800 md:text-6xl">
         Events
       </h1>
-      <ul className="grid gap-10 md:grid-cols-2">
+      <ul className="grid gap-10 md:grid-cols-3">
         {posts.map((post: any) => (
-          <li
-            key={post._id}
-            className="flex flex-col overflow-hidden rounded-2xl border border-[#f3e7d8] bg-[#fff9f3] shadow-md"
-          >
+          <li key={post._id} className="flex flex-col overflow-hidden">
             <Link href={`/blog/${post.slug.current}`} className="block">
               {post.mainImage && (
                 <div className="relative h-56 w-full bg-[#f3e7d8]">
@@ -38,7 +35,7 @@ export default async function BlogPage() {
                   />
                 </div>
               )}
-              <div className="flex flex-1 flex-col justify-between p-6">
+              <div className="flex flex-1 flex-col justify-between py-6">
                 <div>
                   <h2 className="font-PPRegular mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
                     {post.title}
@@ -54,7 +51,7 @@ export default async function BlogPage() {
                     )}
                   </div>
                 </div>
-                <span className="font-NHD mt-2 inline-block text-base text-[#0ed190]">
+                <span className="font-NHD mt-2 inline-block text-base text-lime-900">
                   Read more →
                 </span>
               </div>

@@ -229,7 +229,7 @@ export default function Home() {
           />
 
           {/* Background gradient overlay - behind the text */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-55"></div>
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
@@ -430,21 +430,22 @@ export default function Home() {
       {/* Blog Previews Section */}
       <section className="px-4 py-24 md:px-8">
         <Copy>
-          <h2 className="font-PPItalic text-center text-4xl leading-tight md:text-6xl">
+          <h2 className="font-PPRegular mt-10 text-5xl leading-tight text-gray-800 md:text-8xl">
             Events
           </h2>
         </Copy>
-        <ul className="mt-10 flex list-none flex-col gap-8 p-0 md:flex-row md:justify-center md:gap-6">
+        <ul className="mt-20 flex list-none flex-col gap-8 p-0 md:flex-row md:justify-center md:gap-6">
           {blogPosts.map((post) => (
             <BlogPreview key={post._id} post={post} />
           ))}
         </ul>
         <div className="mt-6 text-center">
-          <Link href="/blog" className="font-medium text-blue-600 underline">
+          <Link href="/blog" className="font-medium text-lime-900 underline">
             See all blog posts
           </Link>
         </div>
       </section>
+      {/* Last Image Section */}
       <div className="h-screen w-full">
         <div className="relative h-full p-4 py-24 md:px-8">
           <Image

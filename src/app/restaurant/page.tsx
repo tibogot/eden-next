@@ -15,7 +15,7 @@ function restaurant() {
         <p className="mb-2 text-lg text-white drop-shadow-lg">
           Enjoy fine dining in a lush garden setting.
         </p>
-        <h1 className="font-PPRegular text-5xl text-white drop-shadow-lg md:text-8xl">
+        <h1 className="font-PPRegular text-5xl text-white text-shadow-lg md:text-8xl">
           Restaurant
         </h1>
       </div>

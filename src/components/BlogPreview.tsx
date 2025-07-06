@@ -27,7 +27,7 @@ export default function BlogPreview({ post }: BlogPreviewProps) {
   return (
     <li className="mb-10 w-full flex-1 md:mb-0 md:w-1/3">
       <Link href={`/blog/${post.slug.current}`} className="block h-full">
-        <div className="flex h-full flex-col items-stretch overflow-hidden rounded-sm border border-[#f3e7d8] bg-[#fff9f3] shadow-md">
+        <div className="flex h-full flex-col items-stretch overflow-hidden">
           <div className="relative flex h-48 w-full items-center justify-center bg-[#f3e7d8] md:h-56">
             <img
               src={imageUrl}
@@ -37,7 +37,7 @@ export default function BlogPreview({ post }: BlogPreviewProps) {
               loading="lazy"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-between p-6">
+          <div className="flex flex-1 flex-col justify-between py-6">
             <div>
               <h2 className="font-PPItalic mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
                 {post.title}
