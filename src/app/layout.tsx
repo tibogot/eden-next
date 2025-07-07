@@ -30,6 +30,17 @@ const ppEditorialNew = localFont({
   variable: "--font-pp-editorial-new",
   display: "swap",
 });
+const ppEditorialNewUL = localFont({
+  src: [
+    {
+      path: "../fonts/PPEditorialNew-Ultralight.otf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-pp-editorial-new-ultralight",
+  display: "swap",
+});
 
 const ppEditorialNewItalic = localFont({
   src: [
@@ -63,14 +74,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} ${ppEditorialNew.variable} ${ppEditorialNewItalic.variable} ${neueHaasDisplay.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ppEditorialNew.variable} ${ppEditorialNewUL.variable} ${ppEditorialNewItalic.variable} ${neueHaasDisplay.variable} antialiased`}
       >
         <LenisProvider>
           <ScrollToTop />

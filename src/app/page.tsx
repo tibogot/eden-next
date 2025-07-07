@@ -245,9 +245,7 @@ export default function Home() {
       <div className="relative bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
         <div className="wrap w-full text-center">
           <Copy>
-            <h2 className="font-PPRegular mt-10 text-5xl leading-tight text-gray-800 md:text-8xl">
-              Services
-            </h2>
+            <h2 className="font-PPRegular mt-10 text-gray-800">Services</h2>
           </Copy>
           <Copy delay={0.2}>
             <p className="font-NHD mx-auto mt-4 text-lg text-stone-500 md:w-1/3">
@@ -270,9 +268,7 @@ export default function Home() {
                 />
               </div>
               <div className="mt-2 flex w-full flex-col items-start justify-start gap-4 p-4 md:mt-0 md:gap-8 md:pl-8">
-                <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
-                  The Bar
-                </h2>
+                <h3 className="font-PPItalic text-gray-800">The Bar</h3>
                 <p className="font-NHD text-lg text-stone-500">
                   Step into our vibrant garden bar, where great drinks meet even
                   better company. Whether you're looking for a refreshing
@@ -304,9 +300,7 @@ export default function Home() {
                 />
               </div>
               <div className="mt-2 flex w-full flex-col justify-start gap-4 p-4 md:mt-0 md:gap-8 md:pl-8">
-                <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
-                  The Pools
-                </h2>
+                <h3 className="font-PPItalic text-gray-800">The Pools</h3>
                 <p className="font-NHD text-lg text-stone-500">
                   Unwind and have fun with friends at our pool tables. Perfect
                   for both casual players and competitive challengers, our
@@ -338,9 +332,7 @@ export default function Home() {
                 />
               </div>
               <div className="mt-2 flex w-full flex-col items-start justify-start gap-4 p-4 md:mt-0 md:gap-8 md:pl-8">
-                <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
-                  The Field
-                </h2>
+                <h3 className="font-PPItalic text-gray-800">The Field</h3>
                 <p className="font-NHD text-lg text-stone-500">
                   For the sports lovers, our football field is the perfect spot
                   to show off your skills or cheer for your favorite team. With
@@ -372,9 +364,7 @@ export default function Home() {
                 />
               </div>
               <div className="mt-2 flex w-full flex-col justify-start gap-4 p-4 md:mt-0 md:w-1/2 md:gap-8 md:py-8">
-                <h2 className="font-PPItalic text-4xl text-gray-800 md:text-6xl">
-                  The Shows
-                </h2>
+                <h3 className="font-PPItalic text-gray-800">The Shows</h3>
                 <p className="font-NHD text-lg text-stone-500">
                   Hillbrook Estate & Farm is a luxury coastal property and
                   working farm situated just north of Whangamata on New
@@ -401,39 +391,28 @@ export default function Home() {
       >
         <div className="absolute inset-0 flex items-center justify-center bg-[#FAF3EB]">
           <img
-            src="/images/night-life.avif"
+            src="/images/sticky-img.webp"
             alt="Scaling Image"
             className="scale-image h-[50vh] w-[50vw] object-cover"
           />
         </div>
-        <div className="imgscaletxt absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
-          <h1 className="font-PPItalic pt-10 text-4xl text-white md:pt-20 md:text-6xl">
-            Enjoy The Night Life in Eden Garden
+        <div className="imgscaletxt absolute inset-0 z-10 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
+          <h1 className="font-PPRegularUL w-1/2 pt-10 text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+            Relax or explore your <br />
+            very own personal playground
           </h1>
+          {/* <h1 className="font-PPItalic w-1/2 pt-10 text-4xl text-white md:pt-20 md:text-6xl">
+            Enjoy The Night Life in Eden Garden
+          </h1> */}
         </div>
       </div>
-      {/* <section className="min-h-screen bg-[#0ed190] px-4 py-10 md:px-8 md:py-20">
-        <div className="wrap font-NHD w-full text-center">
-          <div className=" ">SERVICES</div>
-          <h2 className="font-PPRegular mt-10 text-5xl text-gray-800 md:text-8xl">
-            Services
-          </h2>
-          <p className="font-NHD mx-auto mt-4 text-lg text-stone-500 md:w-1/3">
-            Step into our vibrant garden bar, where great drinks meet even
-            better company. Whether you're looking for a refreshing cocktail, a
-            cold beer.
-          </p>
-        </div>
-      </section> */}
       <ManyServices />
       <ReviewsCarousel />
       {/* Blog Previews Section */}
       <section className="px-4 py-10 md:px-8 md:py-20">
         <Copy>
           <div className="flex w-full flex-col items-center">
-            <h2 className="font-PPRegular text-5xl leading-tight text-gray-800 md:text-8xl">
-              Events
-            </h2>
+            <h2 className="font-PPRegular text-gray-800">Events</h2>
           </div>
         </Copy>
         <ul className="mt-20 flex list-none flex-col gap-8 p-0 md:flex-row md:justify-center md:gap-6">
@@ -441,7 +420,7 @@ export default function Home() {
             <BlogPreview key={post._id} post={post} />
           ))}
         </ul>
-        <div className="mt-6 text-center">
+        <div className="mt-6">
           <Link href="/blog" className="font-medium text-lime-900 underline">
             See all blog posts
           </Link>

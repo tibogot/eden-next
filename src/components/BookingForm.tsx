@@ -131,15 +131,15 @@ const BookingForm = () => {
   return (
     <div className="w-full bg-[#FAF3EB] px-4 py-20 md:px-8">
       <div className="mx-auto max-w-3xl">
-        <h2 className="mb-8 text-center text-4xl font-bold italic md:text-6xl">
+        <h2 className="font-PPRegular mb-8 text-center text-5xl md:text-8xl">
           Book Your Event
         </h2>
-        <p className="mb-12 text-center text-lg text-stone-600">
+        <p className="font-NHD mb-12 text-center text-lg text-stone-600">
           Whether it's a wedding, birthday celebration, or a football match,
           we're here to make your event special.
         </p>
 
-        <div className="space-y-6">
+        <div className="mt-30 space-y-6">
           {/* Personal Details */}
           <div className="grid gap-6 md:grid-cols-2">
             <div>

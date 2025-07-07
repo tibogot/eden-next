@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-PPRegular: var(--font-pp-editorial-new);
+  --font-PPRegularUL: var(--font-pp-editorial-new-ultralight);
   --font-PPItalic: var(--font-pp-editorial-new-italic);
   --font-NHD: var(--font-neue-haas-display);
 }
@@ -27,3 +28,13 @@
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+h2 {
+  @apply text-5xl leading-tight md:text-8xl;
+}
+h3 {
+  @apply text-4xl leading-tight md:text-6xl;
+}
+p {
+  @apply text-lg md:text-xl;
+}
