@@ -21,24 +21,38 @@ export default function ExperiencesCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
   const slideWidth = 500 + 16; // width + gap
 
-  // Helper to jump to real slide after clone
+  // Helper to jump to real slide after clone, using rAF for seamlessness
   const jumpToReal = (idx: number) => {
     if (!containerRef.current) return;
     if (idx === 0) {
       setCurrentIndex(total);
-      containerRef.current.style.transition = "none";
-      containerRef.current.style.transform = `translateX(-${total * slideWidth}px)`;
-      // Force reflow to apply the style immediately
-      void containerRef.current.offsetWidth;
-      containerRef.current.style.transition =
-        "transform 0.5s cubic-bezier(0.76,0,0.24,1)";
+      // Remove transition and jump to real last slide in next frame
+      requestAnimationFrame(() => {
+        if (!containerRef.current) return;
+        containerRef.current.style.transition = "none";
+        containerRef.current.style.transform = `translateX(-${total * slideWidth}px)`;
+        // Force reflow to apply the style immediately
+        void containerRef.current.offsetWidth;
+        // Restore transition in another frame
+        requestAnimationFrame(() => {
+          if (!containerRef.current) return;
+          containerRef.current.style.transition =
+            "transform 0.5s cubic-bezier(0.76,0,0.24,1)";
+        });
+      });
     } else if (idx === slides.length - 1) {
       setCurrentIndex(1);
-      containerRef.current.style.transition = "none";
-      containerRef.current.style.transform = `translateX(-${slideWidth}px)`;
-      void containerRef.current.offsetWidth;
-      containerRef.current.style.transition =
-        "transform 0.5s cubic-bezier(0.76,0,0.24,1)";
+      requestAnimationFrame(() => {
+        if (!containerRef.current) return;
+        containerRef.current.style.transition = "none";
+        containerRef.current.style.transform = `translateX(-${slideWidth}px)`;
+        void containerRef.current.offsetWidth;
+        requestAnimationFrame(() => {
+          if (!containerRef.current) return;
+          containerRef.current.style.transition =
+            "transform 0.5s cubic-bezier(0.76,0,0.24,1)";
+        });
+      });
     }
   };
 
@@ -63,7 +77,10 @@ export default function ExperiencesCarousel() {
   // After transition, check if we need to jump to real slide
   const handleTransitionEnd = () => {
     setIsTransitioning(false);
-    jumpToReal(currentIndex);
+    // Only jump if at a clone
+    if (currentIndex === 0 || currentIndex === slides.length - 1) {
+      jumpToReal(currentIndex);
+    }
   };
 
   return (

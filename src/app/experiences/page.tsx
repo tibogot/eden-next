@@ -1,4 +1,6 @@
 import ExperiencesCarousel from "@/components/ExperiencesCarousel2";
+import ExperiencesCarouselFM from "@/components/ExperiencesCarouselFM";
+import ExperiencesCarouselGSAP from "@/components/ExperiencesCarouselGSAP2";
 import Image from "next/image";
 import React from "react";
 
@@ -61,8 +63,18 @@ function experiences() {
           </p>
         </div>
       </section>
-      <ExperiencesCarousel />
-      <section className="flex min-h-screen w-full flex-col bg-red-500 px-4 py-10 md:flex-row md:px-8 md:py-20"></section>
+      {/* <ExperiencesCarousel /> */}
+      {/* <ExperiencesCarouselFM /> */}
+      <ExperiencesCarouselGSAP />
+      <section className="h-screen w-full flex-col px-4 py-10 md:flex-row md:px-8 md:py-20">
+        <div className="h-full w-full bg-blue-500">
+          <img
+            src="./images/drone2.webp"
+            alt="drone map"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </section>
     </div>
   );
 }
