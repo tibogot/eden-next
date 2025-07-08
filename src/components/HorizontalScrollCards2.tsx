@@ -69,37 +69,37 @@ const HorizontalScrollCards = () => {
       id: 1,
       title: "Bar, drinks, liquors",
       description: "Experience ultimate comfort and elegance",
-      image: "https://picsum.photos/800/600?random=1",
+      image: "/images/horiz/hor-1.webp",
     },
     {
       id: 2,
       title: "Traditional Food",
       description: "Escape to serene mountain landscapes",
-      image: "https://picsum.photos/800/600?random=2",
+      image: "/images/horiz/hor-2.webp",
     },
     {
       id: 3,
       title: "Shawarma",
       description: "Tropical getaway with crystal clear waters",
-      image: "https://picsum.photos/800/600?random=3",
+      image: "/images/horiz/hor-3.webp",
     },
     {
       id: 4,
       title: "Weddings",
       description: "Modern living in the heart of the city",
-      image: "https://picsum.photos/800/600?random=4",
+      image: "/images/horiz/hor-4.webp",
     },
     {
       id: 5,
       title: "Football",
       description: "Reconnect with nature in a cozy woodland setting",
-      image: "https://picsum.photos/800/600?random=5",
+      image: "/images/horiz/hor-5.webp",
     },
     {
       id: 6,
       title: "Comedy Shows",
       description: "Unique experience in a breathtaking desert landscape",
-      image: "https://picsum.photos/800/600?random=6",
+      image: "/images/horiz/hor-6.webp",
     },
   ];
 
