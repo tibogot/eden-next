@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Copy from "@/components/Copy3";
+import Copy from "@/components/Copy5";
 import BookingForm from "@/components/BookingForm";
 
 function contact() {

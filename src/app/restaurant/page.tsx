@@ -1,4 +1,4 @@
-import Copy from "@/components/Copy3";
+import Copy from "@/components/Copy5";
 import Image from "next/image";
 import React from "react";
 

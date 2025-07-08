@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { ArrowRight } from "@phosphor-icons/react";
-import Copy from "@/components/Copy3";
+import Copy from "@/components/Copy5";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -201,7 +201,7 @@ export default function Home() {
           <Copy>
             <h1 className="text-4xl md:text-6xl">
               <span className="font-PPRegular">Experience Paradise </span>
-              <br className="md:hidden" />
+              {/* <br className="md:hidden" /> */}
               <span className="font-PPRegular">in </span>
               <span className="font-PPItalic">every sip </span>
               <br />
