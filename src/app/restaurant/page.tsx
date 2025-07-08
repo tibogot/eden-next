@@ -67,7 +67,7 @@ function restaurant() {
         />
       </section>
 
-      <section className="flex w-full flex-col gap-40 px-4 py-10 md:flex-row md:px-8 md:py-30">
+      <section className="flex w-full flex-col-reverse gap-20 px-4 py-10 md:flex-row md:gap-40 md:px-8 md:py-30">
         <div className="left h-[600px] bg-red-500 md:w-1/2">
           <div className="relative h-full w-full">
             <Image
@@ -82,7 +82,7 @@ function restaurant() {
         </div>
         <div className="right flex flex-col justify-between md:w-1/2">
           <h3 className="font-PPItalic">Drinks & Refreshing Beverages </h3>
-          <p className="font-NHD w-3/4 text-lg leading-tight text-gray-600">
+          <p className="font-NHD mt-8 text-lg leading-tight text-gray-600 md:w-3/4">
             Complement your meal with our extensive selection of beverages.
             Choose from traditional Nigerian drinks like zobo and palm wine,
             international favorites including fresh juices and sodas, or our
@@ -96,7 +96,7 @@ function restaurant() {
       <section className="flex w-full flex-col gap-40 px-4 py-10 md:flex-row md:px-8 md:py-30">
         <div className="right flex flex-col justify-between md:w-1/2">
           <h3 className="font-PPItalic">Authentic Nigerian Delicacies </h3>
-          <p className="font-NHD mt-8 w-3/4 text-lg leading-tight text-gray-600">
+          <p className="font-NHD mt-8 text-lg leading-tight text-gray-600 md:w-3/4">
             Step into the soul of Nigeria through our carefully crafted
             traditional dishes. From aromatic jollof rice and tender suya to
             rich egusi soup and freshly grilled catfish, every meal tells a

@@ -117,7 +117,7 @@ const HorizontalScrollCards = () => {
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={containerRef}
-          className="flex h-full w-max items-center gap-40"
+          className="flex h-full w-max items-center gap-20 md:gap-40"
         >
           {cards.map((card, index) => (
             <div

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import Copy from "./Copy3";
+import Copy from "./Copy5";
 
 interface Service {
   name: string;
@@ -242,7 +242,7 @@ export default function ManyServices() {
         </h2>
       </Copy>
       {/* Description */}
-      <p className="font-NHD mx-auto mb-16 text-center text-lg leading-relaxed text-gray-600 md:w-1/3">
+      <p className="font-NHD mx-auto mb-16 text-center text-lg leading-tight text-gray-600 md:w-1/3">
         Eden Park & Garden is a vibrant oasis in Abuja offering a unique blend
         of entertainment and relaxation. From live music and dance shows to
         thrilling football matches, there's something for everyone.

@@ -233,7 +233,7 @@ export default function Home() {
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <h4 className="font-PPRegularUL w-1/2 pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+              <h4 className="font-PPRegularUL pt-10 text-center text-4xl leading-tight text-white md:w-1/2 md:pt-20 md:text-6xl">
                 A new standard of living <br />
                 at Eden Park & Garden
               </h4>
@@ -396,7 +396,7 @@ export default function Home() {
           />
         </div>
         <div className="imgscaletxt absolute inset-0 z-10 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
-          <h4 className="font-PPRegularUL w-1/2 pt-10 text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+          <h4 className="font-PPRegularUL pt-10 text-4xl leading-tight text-white md:w-1/2 md:pt-20 md:text-6xl">
             Relax or explore your <br />
             very own personal playground
           </h4>
@@ -441,7 +441,7 @@ export default function Home() {
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <h4 className="font-PPRegularUL w-1/2 pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+              <h4 className="font-PPRegularUL pt-10 text-center text-4xl leading-tight text-white md:w-1/2 md:pt-20 md:text-6xl">
                 Relax or explore your <br />
                 very own personal playground
               </h4>
