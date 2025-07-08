@@ -226,11 +226,11 @@ const Menu = () => {
               {link.label}
             </Link>
           ))}
-          <button
+          {/* <button
             className={`font-NHD rounded-lg border px-6 py-2 transition-all duration-300 ${currentVariant.button}`}
           >
             Visit Us
-          </button>
+          </button> */}
         </div>
 
         <button

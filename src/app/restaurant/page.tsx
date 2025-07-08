@@ -1,3 +1,4 @@
+import Copy from "@/components/Copy2";
 import Image from "next/image";
 import React from "react";
 
@@ -20,19 +21,24 @@ function restaurant() {
           Discover the flavors of the world,
           <br /> crafted to your every desire
         </p> */}
-          <h1 className="font-PPRegular text-6xl text-white md:text-9xl">
-            The Restaurant
-          </h1>
+          <Copy isHero>
+            <h1 className="font-PPRegular text-6xl text-white md:text-9xl">
+              The Restaurant
+            </h1>
+          </Copy>
         </div>
       </section>
 
       {/* Content Section */}
       <section className="px-4 py-10 md:px-8 md:py-30">
         <div className="flex flex-col items-center text-center">
-          <h3 className="font-PPItalic text-4xl text-black md:text-6xl">
-            Savor the Flavors <br />
-            of Eden Garden
-          </h3>
+          <Copy>
+            <h3 className="font-PPItalic text-4xl text-black md:text-6xl">
+              Savor the Flavors <br />
+              of Eden Garden
+            </h3>
+          </Copy>
+
           <p className="mt-6 text-lg leading-tight text-gray-600 md:w-1/3">
             Welcome to Eden Garden's culinary paradise, where the rich
             traditions of Nigerian cuisine meet international flavors in perfect
