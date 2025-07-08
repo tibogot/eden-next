@@ -132,7 +132,7 @@ const BookingForm = () => {
     <div className="w-full bg-[#FAF3EB] px-4 py-20 md:px-8">
       <div className="mx-auto max-w-3xl">
         <h2 className="font-PPRegular text-center">Book Your Event</h2>
-        <p className="font-NHD mx-auto mt-4 mb-12 text-center text-lg leading-tight text-balance text-stone-600 md:w-3/4">
+        <p className="font-NHD mx-auto mt-4 mb-12 text-center text-lg text-balance text-stone-600 md:w-3/4">
           Whether it's a wedding, birthday celebration, or a football match,
           we're here to make your event special.
         </p>

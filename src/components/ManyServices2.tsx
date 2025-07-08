@@ -242,7 +242,7 @@ export default function ManyServices() {
         </h2>
       </Copy>
       {/* Description */}
-      <p className="font-NHD mx-auto mb-16 text-center text-lg leading-tight text-gray-600 md:w-1/3">
+      <p className="font-NHD mx-auto mb-16 text-center text-lg text-gray-600 md:w-1/3">
         Eden Park & Garden is a vibrant oasis in Abuja offering a unique blend
         of entertainment and relaxation. From live music and dance shows to
         thrilling football matches, there's something for everyone.

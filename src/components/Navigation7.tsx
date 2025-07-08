@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const menuLinks = [
   { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
+  // { path: "/about", label: "About" },
   { path: "/restaurant", label: "Restaurant" },
   { path: "/experiences", label: "Experiences" },
   // { path: "/services", label: "Services" },
