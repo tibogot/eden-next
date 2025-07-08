@@ -297,6 +297,9 @@ const Menu = () => {
                 </div>
               ))}
             </div>
+            <div className="mt-20 text-white">
+              <p>Eden Park 2025</p>
+            </div>
           </div>
         </div>
       </div>

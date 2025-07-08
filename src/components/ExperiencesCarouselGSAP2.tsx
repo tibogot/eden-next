@@ -136,7 +136,7 @@ export default function ExperiencesCarouselGSAP() {
       </div>
 
       {/* Right: Carousel Container */}
-      <div className="relative ml-10 overflow-hidden md:w-2/3">
+      <div className="relative overflow-hidden md:ml-10 md:w-2/3">
         <div
           ref={containerRef}
           className="flex h-full gap-4 will-change-transform"

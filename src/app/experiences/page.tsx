@@ -1,5 +1,4 @@
-import ExperiencesCarousel from "@/components/ExperiencesCarousel2";
-import ExperiencesCarouselFM from "@/components/ExperiencesCarouselFM";
+import Copy from "@/components/Copy3";
 import ExperiencesCarouselGSAP from "@/components/ExperiencesCarouselGSAP2";
 import Image from "next/image";
 import React from "react";
@@ -9,7 +8,7 @@ function experiences() {
     <div className="wrapper bg-[#FAF3EB]">
       <section className="relative h-svh w-full overflow-hidden px-4 py-10 md:px-8 md:py-10">
         <Image
-          src="/images/pool-exp.webp"
+          src="/images/barmaid-exp.webp"
           alt="restaurant"
           fill
           priority
@@ -22,26 +21,33 @@ function experiences() {
               Discover the flavors of the world,
               <br /> crafted to your every desire
             </p> */}
-          <h1 className="font-PPRegular text-6xl text-white md:text-9xl">
-            Experiences
-          </h1>
+          <Copy isHero>
+            <h1 className="font-PPRegular text-6xl text-white md:text-9xl">
+              Experiences
+            </h1>
+          </Copy>
         </div>
       </section>
-      <section className="flex w-full flex-col gap-40 px-4 py-10 md:flex-row md:px-8 md:py-30">
-        <div className="right flex flex-col justify-between md:w-1/2">
-          <h3 className="font-PPItalic">Authentic Nigerian Delicacies </h3>
-          <p className="font-NHD mt-8 w-3/4 text-lg leading-tight text-gray-600">
-            Step into the soul of Nigeria through our carefully crafted
-            traditional dishes. From aromatic jollof rice and tender suya to
-            rich egusi soup and freshly grilled catfish, every meal tells a
-            story of our cultural heritage. Our expert chefs use time-honored
-            recipes passed down through generations, ensuring each bite delivers
-            the authentic flavors that make Nigerian cuisine truly special.
+      <section className="px-4 py-10 md:px-8 md:py-30">
+        <div className="flex flex-col items-center text-center">
+          <Copy>
+            <h3 className="font-PPItalic text-4xl text-black md:text-6xl">
+              Savor the Flavors <br />
+              of Eden Garden
+            </h3>
+          </Copy>
+
+          <p className="font-NHD mt-6 text-lg leading-tight text-gray-600 md:w-1/3">
+            Welcome to Eden Garden's culinary paradise, where the rich
+            traditions of Nigerian cuisine meet international flavors in perfect
+            harmony. Nestled in the heart of Abuja, our restaurant offers an
+            unforgettable dining experience that celebrates both local heritage
+            and global gastronomy.
           </p>
         </div>
       </section>
-      <section className="flex w-full flex-col gap-40 px-4 py-10 md:flex-row md:px-8 md:py-20">
-        <div className="left h-[700px] bg-red-500 md:w-1/2">
+      <section className="flex w-full flex-col gap-10 px-4 py-10 md:flex-row md:gap-60 md:px-8 md:py-20">
+        <div className="left h-[500px] bg-red-500 md:h-[700px] md:w-1/2">
           <div className="relative h-full w-full">
             <Image
               src="/images/foot-exp.webp"
@@ -66,7 +72,7 @@ function experiences() {
       {/* <ExperiencesCarousel /> */}
       {/* <ExperiencesCarouselFM /> */}
       <ExperiencesCarouselGSAP />
-      <section className="h-screen w-full flex-col px-4 py-10 md:flex-row md:px-8 md:py-20">
+      <section className="h-[800px] w-full px-4 py-10 md:px-8 md:py-20">
         <div className="h-full w-full bg-blue-500">
           <img
             src="./images/drone2.webp"

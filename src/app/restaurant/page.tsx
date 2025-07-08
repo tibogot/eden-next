@@ -33,7 +33,7 @@ function restaurant() {
             Savor the Flavors <br />
             of Eden Garden
           </h3>
-          <p className="mt-6 w-1/3 text-lg leading-tight text-gray-600">
+          <p className="mt-6 text-lg leading-tight text-gray-600 md:w-1/3">
             Welcome to Eden Garden's culinary paradise, where the rich
             traditions of Nigerian cuisine meet international flavors in perfect
             harmony. Nestled in the heart of Abuja, our restaurant offers an
