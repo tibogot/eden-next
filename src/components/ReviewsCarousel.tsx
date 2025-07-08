@@ -127,7 +127,7 @@ const ReviewsCarousel = () => {
                 ),
               )}
             </div>
-            <h6 className="font-PPRegularUL mb-10 w-3/4 text-2xl leading-tight text-white md:w-1/2 md:text-3xl/12">
+            <h6 className="font-PPRegularUL mb-10 w-3/4 text-2xl leading-tight text-white md:w-1/2 md:text-4xl/12">
               “{currentReview.text}”
             </h6>
             <p className="font-NHD text-sm text-white/80">

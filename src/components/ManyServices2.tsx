@@ -237,9 +237,9 @@ export default function ManyServices() {
     <section className="relative min-h-screen w-full bg-[#FAF3EB] px-4 py-20 md:px-8 md:py-20">
       {/* Title */}
       <Copy>
-        <h2 className="font-PPRegular mb-4 text-center text-5xl leading-tight text-gray-800 md:text-8xl">
+        <h3 className="font-PPRegular mb-4 text-center text-5xl leading-tight text-gray-800 md:text-8xl">
           And many more
-        </h2>
+        </h3>
       </Copy>
       {/* Description */}
       <p className="font-NHD mx-auto mb-16 text-center text-lg text-gray-600 md:w-1/3">
