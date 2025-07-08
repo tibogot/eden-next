@@ -233,11 +233,10 @@ export default function Home() {
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <h1 className="font-PPItalic text-center text-4xl leading-tight text-white md:text-6xl">
-                A New Standard of
-                <br />
-                Living at Eden
-              </h1>
+              <h4 className="font-PPRegularUL w-1/2 pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+                A new standard of living <br />
+                at Eden Park & Garden
+              </h4>
             </div>
           </div>
         </div>
@@ -397,10 +396,10 @@ export default function Home() {
           />
         </div>
         <div className="imgscaletxt absolute inset-0 z-10 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
-          <h1 className="font-PPRegularUL w-1/2 pt-10 text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+          <h4 className="font-PPRegularUL w-1/2 pt-10 text-4xl leading-tight text-white md:pt-20 md:text-6xl">
             Relax or explore your <br />
             very own personal playground
-          </h1>
+          </h4>
           {/* <h1 className="font-PPItalic w-1/2 pt-10 text-4xl text-white md:pt-20 md:text-6xl">
             Enjoy The Night Life in Eden Garden
           </h1> */}
@@ -442,11 +441,10 @@ export default function Home() {
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <h1 className="font-PPItalic text-center text-4xl leading-tight text-white md:text-6xl">
-                A New Standard of
-                <br />
-                Living at Eden
-              </h1>
+              <h4 className="font-PPRegularUL w-1/2 pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-6xl">
+                Relax or explore your <br />
+                very own personal playground
+              </h4>
             </div>
           </div>
         </div>

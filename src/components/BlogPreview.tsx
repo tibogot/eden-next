@@ -44,9 +44,9 @@ export default function BlogPreview({ post }: BlogPreviewProps) {
                   {new Date(post.publishedAt).toLocaleDateString()}
                 </p>
               )}
-              <h3 className="font-PPItalic mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
+              <h5 className="font-PPItalic mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
                 {post.title}
-              </h3>
+              </h5>
 
               <div className="font-NHD mb-2 line-clamp-3 text-base text-stone-600 md:text-lg">
                 {post.body && <PortableText value={post.body.slice(0, 1)} />}
