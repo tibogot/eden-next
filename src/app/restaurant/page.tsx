@@ -39,7 +39,7 @@ function restaurant() {
             </h3>
           </Copy>
 
-          <p className="mt-6 text-lg leading-tight text-gray-600 md:w-1/3">
+          <p className="font-NHD mt-6 text-lg leading-tight text-gray-600 md:w-1/3">
             Welcome to Eden Garden's culinary paradise, where the rich
             traditions of Nigerian cuisine meet international flavors in perfect
             harmony. Nestled in the heart of Abuja, our restaurant offers an

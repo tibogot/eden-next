@@ -61,7 +61,7 @@ function experiences() {
         </div>
         <div className="right flex flex-col justify-end md:w-1/2">
           {/* <h3 className="font-PPItalic">Drinks & Refreshing Beverages </h3> */}
-          <p className="font-NHD w-3/4 text-lg leading-tight text-gray-600">
+          <p className="font-NHD text-lg leading-tight text-gray-600 md:w-3/4">
             Eden Park & Garden is a vibrant oasis in Abuja, offering a unique
             blend of entertainment and relaxation. From live music and dance
             shows to thrilling football matches, there's something for everyone.
