@@ -21,20 +21,7 @@ export default function Home() {
   const servicesRef = useRef<HTMLElement>(null);
   const scaleImgRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
-  const heroParallaxRef = useRef<HTMLDivElement>(null);
   const [blogPosts, setBlogPosts] = useState<any[]>([]);
-
-  // Parallax effect for hero image (isolated from GSAP/useGSAP)
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!heroParallaxRef.current) return;
-      const scrollY = window.scrollY;
-      // Adjust 0.25 for more/less parallax
-      heroParallaxRef.current.style.transform = `translateY(${scrollY * 0.25}px)`;
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     async function fetchPosts() {
@@ -193,22 +180,16 @@ export default function Home() {
     <div className="wrapper bg-[#FAF3EB]">
       {/* Hero Section */}
       <section className="relative h-svh w-full overflow-hidden">
-        {/* Parallax only on the background image */}
         <div className="relative h-full w-full">
-          <div
-            ref={heroParallaxRef}
-            className="absolute inset-0 will-change-transform"
-            style={{ zIndex: 1 }}
-          >
-            <Image
-              src="/images/hero-bg.webp"
-              alt="Hero background"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
-          </div>
+          <Image
+            src="/images/hero-bg.webp"
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+
           <div className="absolute bottom-0 left-1/2 z-20 w-[90vw] -translate-x-1/2 md:w-[75vw]">
             <img src="/logo.svg" alt="Logo" className="h-auto w-full" />
           </div>

@@ -24,13 +24,13 @@ export default async function BlogPage() {
       <ul className="grid gap-10 md:grid-cols-3">
         {posts.map((post: any) => (
           <li key={post._id} className="flex flex-col overflow-hidden">
-            <Link href={`/blog/${post.slug.current}`} className="block">
+            <Link href={`/blog/${post.slug.current}`} className="group block">
               {post.mainImage && (
-                <div className="relative h-56 w-full bg-[#f3e7d8]">
+                <div className="relative h-56 w-full overflow-hidden bg-[#f3e7d8]">
                   <img
                     src={post.mainImage.asset.url}
                     alt={post.title}
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
@@ -42,9 +42,9 @@ export default async function BlogPage() {
                       {new Date(post.publishedAt).toLocaleDateString()}
                     </p>
                   )}
-                  <h2 className="font-PPRegular mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
+                  <h5 className="font-PPRegular mb-2 text-2xl leading-tight text-gray-800 md:text-3xl">
                     {post.title}
-                  </h2>
+                  </h5>
 
                   <div className="font-NHD mb-2 line-clamp-3 text-base text-stone-600 md:text-lg">
                     {post.body && (

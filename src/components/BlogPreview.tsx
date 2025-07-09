@@ -26,13 +26,13 @@ export default function BlogPreview({ post }: BlogPreviewProps) {
 
   return (
     <li className="mb-10 w-full flex-1 md:mb-0 md:w-1/3">
-      <Link href={`/blog/${post.slug.current}`} className="block h-full">
+      <Link href={`/blog/${post.slug.current}`} className="group block h-full">
         <div className="flex h-full flex-col items-stretch overflow-hidden">
-          <div className="relative flex h-48 w-full items-center justify-center bg-[#f3e7d8] md:h-56">
+          <div className="relative flex h-48 w-full items-center justify-center overflow-hidden bg-[#f3e7d8] md:h-56">
             <img
               src={imageUrl}
               alt={post.title}
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               style={{ fontFamily: "object-fit: cover" }}
               loading="lazy"
             />
