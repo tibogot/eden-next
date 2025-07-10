@@ -80,9 +80,9 @@ function ServiceItem({ index, name, href, setModal }: ServiceItemProps) {
           <h3 className="text-4xl text-gray-800 transition-all duration-300 group-hover:translate-x-2 group-hover:text-lime-900 md:text-6xl">
             {name}
           </h3>
-          <div className="text-sm tracking-wide text-gray-400 uppercase">
+          {/* <div className="text-sm tracking-wide text-gray-400 uppercase">
             Explore
-          </div>
+          </div> */}
         </div>
       </a>
     </div>

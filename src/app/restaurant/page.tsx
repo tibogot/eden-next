@@ -1,4 +1,5 @@
 import Copy from "@/components/Copy5";
+import Parallax from "@/components/Parallax";
 import Image from "next/image";
 import React from "react";
 
@@ -106,6 +107,7 @@ function restaurant() {
           </p>
         </div>
       </section>
+      <Parallax />
     </div>
   );
 }

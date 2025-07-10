@@ -252,8 +252,8 @@ export default function Home() {
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <p className="font-PPRegularUL pt-10 text-center text-4xl leading-tight text-white md:w-3/4 md:pt-20 md:text-8xl">
-                A new standard of living at Eden Park & Garden
+              <p className="font-PPRegularUL pt-10 text-center text-4xl leading-tight text-white md:w-3/4 md:pt-20 md:text-6xl">
+                A new standard of living at <br /> Eden Park & Garden
               </p>
             </div>
           </div>
