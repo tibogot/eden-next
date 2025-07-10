@@ -107,7 +107,7 @@ function restaurant() {
           </p>
         </div>
       </section>
-      <Parallax />
+      {/* <Parallax /> */}
     </div>
   );
 }
