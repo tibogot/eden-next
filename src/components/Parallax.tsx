@@ -39,7 +39,7 @@ function ParallaxSection({
   return (
     <section
       ref={sectionRef}
-      className="relative flex h-screen w-full items-center justify-center overflow-visible bg-amber-300 px-4 py-10 md:px-8 md:py-30"
+      className="relative flex h-screen w-full items-center justify-center overflow-visible px-4 py-10 md:px-8 md:py-30"
     >
       {images.map((src, i) => {
         // Card parallax: as section scrolls into view, move card upward by up to 600px * speed
@@ -90,9 +90,9 @@ function ParallaxSection({
 
 export default function Parallax() {
   return (
-    <div className="overflow-visible">
+    <div className="relative overflow-visible">
       <ParallaxSection images={images1} label="Lunch" />
-      <ParallaxSection images={images2} label="Lunch" />
+      <ParallaxSection images={images2} label="Dinner" />
     </div>
   );
 }
