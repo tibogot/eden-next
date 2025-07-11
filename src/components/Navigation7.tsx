@@ -198,7 +198,7 @@ const Menu = () => {
     : headerVariants.default;
 
   return (
-    <div className="relative" ref={container}>
+    <div className="relative select-none" ref={container}>
       {/* HEADER */}
       <div
         className={`fixed top-0 left-0 z-40 flex w-full items-center justify-between border-b p-4 transition-all duration-300 ${currentVariant.bg} ${currentVariant.border}`}
