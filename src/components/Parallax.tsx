@@ -1,98 +1,148 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-const images1 = [
+gsap.registerPlugin(ScrollTrigger);
+
+const images = [
   "https://picsum.photos/id/1015/300/400",
   "https://picsum.photos/id/1016/250/350",
   "https://picsum.photos/id/1018/200/300",
   "https://picsum.photos/id/1020/220/320",
-];
-const images2 = [
   "https://picsum.photos/id/1024/300/400",
   "https://picsum.photos/id/1025/250/350",
   "https://picsum.photos/id/1027/200/300",
   "https://picsum.photos/id/1035/220/320",
 ];
 
-const imgStyles = [
-  { top: "-10%", left: "5%", speed: 1.2 },
-  { top: "80%", left: "25%", speed: 1.7 },
-  { top: "40%", left: "75%", speed: 2.1 },
-  { top: "120%", left: "55%", speed: 1.5 },
+// Absolute positions for cards in first and second sections
+const positionsFirstHalf = [
+  { top: "10%", left: "0%" },
+  { top: "20%", right: "10%" },
+  { bottom: "15%", left: "20%" },
+  { bottom: "5%", right: "15%" },
 ];
 
-function ParallaxSection({
-  images,
-  label,
+const positionsSecondHalf = [
+  { top: "5%", left: "10%" },
+  { top: "25%", right: "15%" },
+  { bottom: "20%", left: "25%" },
+  { bottom: "0%", right: "0%" },
+];
+
+// Example food/cocktail names for each card
+const cardTitles = [
+  "Negroni",
+  "Espresso Martini",
+  "Aperol Spritz",
+  "Margarita",
+  "Avocado Toast",
+  "Truffle Fries",
+  "Caprese Salad",
+  "Tuna Tartare",
+];
+
+function ParallaxCard({
+  src,
+  style,
+  speed,
+  title,
 }: {
-  images: string[];
-  label: string;
+  src: string;
+  style: React.CSSProperties;
+  speed: number;
+  title: string;
 }) {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
+  const cardRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useGSAP(() => {
+    if (!cardRef.current || !imageRef.current) return;
+
+    // Outer card parallax
+    gsap.to(cardRef.current, {
+      y: -100 * speed,
+      ease: "none",
+      scrollTrigger: {
+        trigger: cardRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    // Inner image parallax
+    gsap.to(imageRef.current, {
+      y: 30 * speed,
+      ease: "none",
+      scrollTrigger: {
+        trigger: cardRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, [speed]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative flex h-screen w-full items-center justify-center overflow-visible px-4 py-10 md:px-8 md:py-30"
+    <div
+      ref={cardRef}
+      className="absolute flex h-60 w-44 flex-col items-start overflow-visible will-change-transform md:h-80 md:w-60"
+      style={style}
     >
-      {images.map((src, i) => {
-        // Card parallax: as section scrolls into view, move card upward by up to 600px * speed
-        const yCard = useTransform(
-          scrollYProgress,
-          [0, 1],
-          [0, -600 * imgStyles[i].speed],
-        );
-        // Image parallax: move image inside card at a different speed (slower or faster)
-        const yImg = useTransform(
-          scrollYProgress,
-          [0, 1],
-          [0, -300 * (imgStyles[i].speed * 1.5)],
-        );
-        return (
-          <motion.div
-            key={src}
-            style={{
-              top: imgStyles[i].top,
-              left: imgStyles[i].left,
-              y: yCard,
-            }}
-            className="absolute z-[2] h-[480px] w-[360px] overflow-hidden bg-white shadow-lg"
-            draggable={false}
-          >
-            <motion.img
-              src={src}
-              alt="parallax"
-              style={{
-                y: useTransform(
-                  scrollYProgress,
-                  [0, 1],
-                  [0, -60 * imgStyles[i].speed],
-                ),
-              }}
-              className="absolute top-0 left-0 h-[130%] w-[130%] object-cover"
-              draggable={false}
-            />
-          </motion.div>
-        );
-      })}
-      <h2 className="font-PPItalic relative z-10 text-4xl text-black md:text-6xl">
-        {label}
-      </h2>
-    </section>
+      <div className="relative h-full w-full overflow-hidden bg-white">
+        <img
+          ref={imageRef}
+          src={src}
+          alt="Card"
+          className="h-full w-full scale-150 object-cover will-change-transform"
+          draggable={false}
+        />
+      </div>
+      <span className="font-PPItalic mt-2 w-full text-left text-xl text-black select-none">
+        {title}
+      </span>
+    </div>
   );
 }
 
-export default function Parallax() {
+export default function ParallaxLayout() {
   return (
-    <div className="relative overflow-visible">
-      <ParallaxSection images={images1} label="Lunch" />
-      <ParallaxSection images={images2} label="Dinner" />
+    <div className="relative h-[150vh] w-full bg-[#FAF3EB] px-4 md:h-[200vh] md:px-8">
+      {/* First Section - Lunch */}
+      <div className="relative flex h-[75vh] w-full items-center justify-center md:h-[100vh]">
+        <h2 className="font-PPItalic z-10 text-center text-4xl text-black md:text-6xl">
+          Lunch
+        </h2>
+        {positionsFirstHalf.map((pos, i) => (
+          <ParallaxCard
+            key={i}
+            src={images[i]}
+            style={{ ...pos, zIndex: 5 }}
+            speed={1 + i * 0.2}
+            title={cardTitles[i]}
+          />
+        ))}
+      </div>
+
+      {/* Second Section - Dinner */}
+      <div className="relative flex h-[75vh] w-full items-center justify-center md:h-[100vh]">
+        <h2 className="font-PPItalic z-10 text-center text-4xl text-black md:text-6xl">
+          Dinner
+        </h2>
+        {positionsSecondHalf.map((pos, i) => (
+          <ParallaxCard
+            key={i}
+            src={images[i + 4]}
+            style={{ ...pos, zIndex: 5 }}
+            speed={1.5 + i * 0.3}
+            title={cardTitles[i + 4]}
+          />
+        ))}
+      </div>
     </div>
   );
 }
