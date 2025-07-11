@@ -21,9 +21,9 @@ const images = [
 // Absolute positions for cards in first and second sections
 const positionsFirstHalf = [
   { top: "10%", left: "0%" },
-  { top: "20%", right: "10%" },
-  { bottom: "15%", left: "20%" },
-  { bottom: "5%", right: "15%" },
+  { top: "0%", right: "10%" },
+  { bottom: "5%", left: "15%" },
+  { bottom: "0%", right: "5%" },
 ];
 
 const positionsSecondHalf = [
@@ -62,7 +62,7 @@ function ParallaxCard({
   useGSAP(() => {
     if (!cardRef.current || !imageRef.current) return;
 
-    // Outer card parallax
+    // Outer card parallax (variable speed)
     gsap.to(cardRef.current, {
       y: -100 * speed,
       ease: "none",
@@ -74,9 +74,9 @@ function ParallaxCard({
       },
     });
 
-    // Inner image parallax
+    // Inner image parallax (fixed speed for all cards)
     gsap.to(imageRef.current, {
-      y: 30 * speed,
+      y: 60,
       ease: "none",
       scrollTrigger: {
         trigger: cardRef.current,
@@ -90,7 +90,7 @@ function ParallaxCard({
   return (
     <div
       ref={cardRef}
-      className="absolute flex h-60 w-44 flex-col items-start overflow-visible will-change-transform md:h-80 md:w-60"
+      className="absolute flex h-60 w-44 flex-col items-start overflow-visible will-change-transform md:h-100 md:w-80"
       style={style}
     >
       <div className="relative h-full w-full overflow-hidden bg-white">
@@ -102,7 +102,7 @@ function ParallaxCard({
           draggable={false}
         />
       </div>
-      <span className="font-PPItalic mt-2 w-full text-left text-xl text-black select-none">
+      <span className="font-PPRegular mt-2 w-full text-left text-xl text-black select-none">
         {title}
       </span>
     </div>
@@ -122,7 +122,7 @@ export default function ParallaxLayout() {
             key={i}
             src={images[i]}
             style={{ ...pos, zIndex: 5 }}
-            speed={1 + i * 0.2}
+            speed={0.5 + i * 0.7}
             title={cardTitles[i]}
           />
         ))}
@@ -138,7 +138,7 @@ export default function ParallaxLayout() {
             key={i}
             src={images[i + 4]}
             style={{ ...pos, zIndex: 5 }}
-            speed={1.5 + i * 0.3}
+            speed={0.7 + i * 1.1}
             title={cardTitles[i + 4]}
           />
         ))}

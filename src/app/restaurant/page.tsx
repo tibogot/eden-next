@@ -49,7 +49,7 @@ function restaurant() {
           </p>
         </div>
       </section>
-      <section className="relative h-[150vh] w-full overflow-hidden bg-green-500 px-4 py-10 md:px-8 md:py-20">
+      <section className="relative h-[75vh] w-full overflow-hidden bg-green-500 px-4 py-10 md:h-[150vh] md:px-8 md:py-20">
         <div className="relative z-10 flex h-full w-full justify-center">
           <h1 className="font-PPItalic text-center text-4xl leading-tight text-white md:text-6xl">
             A New Standard of
