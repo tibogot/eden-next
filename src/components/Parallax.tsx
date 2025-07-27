@@ -102,7 +102,7 @@ function ParallaxCard({
           draggable={false}
         />
       </div>
-      <span className="font-PPRegular mt-2 w-full text-left text-xl text-black select-none">
+      <span className="font-PPRegularUL mt-2 w-full text-left text-xl text-black select-none">
         {title}
       </span>
     </div>
