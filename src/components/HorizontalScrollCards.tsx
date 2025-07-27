@@ -17,6 +17,10 @@ const HorizontalScrollCards = () => {
 
     const cards = gsap.utils.toArray<HTMLElement>(".scroll-card");
 
+    // Store animations for proper cleanup
+    const animations: gsap.core.Tween[] = [];
+    const triggers: ScrollTrigger[] = [];
+
     // Horizontal Scroll Animation without pin
     const horizontalScrollAnimation = gsap.to(container, {
       x: () =>
@@ -30,9 +34,14 @@ const HorizontalScrollCards = () => {
       },
     });
 
+    animations.push(horizontalScrollAnimation);
+    if (horizontalScrollAnimation.scrollTrigger) {
+      triggers.push(horizontalScrollAnimation.scrollTrigger as ScrollTrigger);
+    }
+
     // Individual card rotation animations
     cards.forEach((card, index) => {
-      gsap.to(card, {
+      const cardAnimation = gsap.to(card, {
         rotation: index % 2 === 0 ? -15 : 15, // Alternate rotation direction
         scrollTrigger: {
           trigger: triggerRef.current,
@@ -41,11 +50,17 @@ const HorizontalScrollCards = () => {
           scrub: 1.5,
         },
       });
+
+      animations.push(cardAnimation);
+      if (cardAnimation.scrollTrigger) {
+        triggers.push(cardAnimation.scrollTrigger as ScrollTrigger);
+      }
     });
 
     return () => {
-      horizontalScrollAnimation.kill();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      // Kill only animations created by this component
+      animations.forEach((anim) => anim.kill());
+      triggers.forEach((trigger) => trigger.kill());
     };
   }, []);
 

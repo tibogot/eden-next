@@ -18,6 +18,10 @@ const HorizontalScrollCards = () => {
     const cards = gsap.utils.toArray<HTMLElement>(".scroll-card");
     const images = gsap.utils.toArray<HTMLElement>(".parallax-image");
 
+    // Store animations for proper cleanup
+    const animations: gsap.core.Tween[] = [];
+    const triggers: ScrollTrigger[] = [];
+
     // Horizontal Scroll Animation without pin
     const horizontalScrollAnimation = gsap.to(container, {
       x: () =>
@@ -31,9 +35,14 @@ const HorizontalScrollCards = () => {
       },
     });
 
+    animations.push(horizontalScrollAnimation);
+    if (horizontalScrollAnimation.scrollTrigger) {
+      triggers.push(horizontalScrollAnimation.scrollTrigger as ScrollTrigger);
+    }
+
     // Individual card rotation animations
     cards.forEach((card, index) => {
-      gsap.to(card, {
+      const cardAnimation = gsap.to(card, {
         rotation: index % 2 === 0 ? -15 : 15, // Alternate rotation direction
         scrollTrigger: {
           trigger: triggerRef.current,
@@ -42,11 +51,16 @@ const HorizontalScrollCards = () => {
           scrub: 1.5,
         },
       });
+
+      animations.push(cardAnimation);
+      if (cardAnimation.scrollTrigger) {
+        triggers.push(cardAnimation.scrollTrigger as ScrollTrigger);
+      }
     });
 
     // Parallax effect for images - they move at a different speed than the cards
     images.forEach((image, index) => {
-      gsap.to(image, {
+      const imageAnimation = gsap.to(image, {
         x: index % 2 === 0 ? -100 : 100, // Alternate direction for variety
         ease: "none",
         scrollTrigger: {
@@ -56,11 +70,17 @@ const HorizontalScrollCards = () => {
           scrub: 2, // Different scrub value for parallax effect
         },
       });
+
+      animations.push(imageAnimation);
+      if (imageAnimation.scrollTrigger) {
+        triggers.push(imageAnimation.scrollTrigger as ScrollTrigger);
+      }
     });
 
     return () => {
-      horizontalScrollAnimation.kill();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      // Kill only animations created by this component
+      animations.forEach((anim) => anim.kill());
+      triggers.forEach((trigger) => trigger.kill());
     };
   }, []);
 

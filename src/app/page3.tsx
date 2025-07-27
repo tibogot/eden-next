@@ -57,22 +57,14 @@ export default function Home() {
 
   useGSAP(
     () => {
-      // Integrate Lenis with ScrollTrigger for better performance
-      const lenis = (window as any).lenis;
-      if (lenis) {
-        lenis.on("scroll", ScrollTrigger.update);
-
-        gsap.ticker.add((time) => {
-          lenis.raf(time * 1000);
-        });
-
-        gsap.ticker.lagSmoothing(0);
-      }
+      // Store animations for proper cleanup
+      const animations: gsap.core.Tween[] = [];
+      const triggers: ScrollTrigger[] = [];
 
       // About section sticky effect
       const aboutSection = aboutRef.current;
       if (aboutSection) {
-        gsap.timeline({
+        const aboutTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: aboutSection,
             start: "top top",
@@ -81,14 +73,13 @@ export default function Home() {
             pinSpacing: false,
           },
         });
+        triggers.push(aboutTimeline.scrollTrigger as ScrollTrigger);
       }
 
       // Existing clip-path animations
       const images = gsap.utils.toArray<HTMLImageElement>(
         ".service-image:not(#scaleimg .service-image)",
       );
-
-      const imageAnimations: gsap.core.Tween[] = [];
 
       images.forEach((image) => {
         gsap.set(image, {
@@ -104,11 +95,13 @@ export default function Home() {
             start: "top 90%",
             end: "top 10%",
             scrub: 1,
-            // markers: true,
           },
         });
 
-        imageAnimations.push(animation);
+        animations.push(animation);
+        if (animation.scrollTrigger) {
+          triggers.push(animation.scrollTrigger as ScrollTrigger);
+        }
       });
 
       // Scale animation with clip path reveal
@@ -137,6 +130,11 @@ export default function Home() {
           },
         });
 
+        animations.push(clipAnimation);
+        if (clipAnimation.scrollTrigger) {
+          triggers.push(clipAnimation.scrollTrigger as ScrollTrigger);
+        }
+
         // Second timeline for pinning and scaling
         scaleTimeline = gsap.timeline({
           scrollTrigger: {
@@ -147,6 +145,10 @@ export default function Home() {
             scrub: 1,
           },
         });
+
+        if (scaleTimeline.scrollTrigger) {
+          triggers.push(scaleTimeline.scrollTrigger as ScrollTrigger);
+        }
 
         // First animation: Scale the image
         scaleTimeline.to(scaleImg, {
@@ -168,20 +170,13 @@ export default function Home() {
         );
       }
 
-      // Cleanup function - this is automatically called by useGSAP
+      // Cleanup function - only kill animations created by this component
       return () => {
-        // Kill all animations
-        imageAnimations.forEach((anim) => anim.kill());
-        if (clipAnimation) clipAnimation.kill();
+        // Kill only animations created by this component
+        animations.forEach((anim) => anim.kill());
+        triggers.forEach((trigger) => trigger.kill());
+
         if (scaleTimeline) scaleTimeline.kill();
-
-        // Kill all ScrollTriggers
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-
-        // Remove Lenis integration
-        if (lenis) {
-          lenis.off("scroll", ScrollTrigger.update);
-        }
       };
     },
     {
