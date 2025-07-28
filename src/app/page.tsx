@@ -185,7 +185,7 @@ export default function Home() {
     },
   );
   return (
-    <div className="wrapper bg-[#FAF3EB]">
+    <div className="wrapper bg-primary">
       {/* Hero Section */}
       <section className="relative h-svh w-full overflow-hidden">
         {/* Parallax only on the background image */}
@@ -213,7 +213,7 @@ export default function Home() {
       <section className="flex flex-col px-4 pt-10 md:px-8 md:pt-20">
         <div className="flex flex-col items-center text-center">
           <Copy>
-            <h1 className="text-4xl md:text-6xl">
+            <h1 className="text-secondary text-4xl md:text-6xl">
               <span className="font-PPRegular">Experience Paradise </span>
               {/* <br className="md:hidden" /> */}
               <span className="font-PPRegular">in </span>
@@ -223,7 +223,7 @@ export default function Home() {
             </h1>
           </Copy>
           <Copy>
-            <p className="font-NHD mt-4 max-w-2xl py-4 text-lg text-stone-500 md:py-8 md:text-xl">
+            <p className="font-NHD text-secondary mt-4 max-w-2xl py-4 text-lg md:py-8 md:text-xl">
               Welcome to Eden Park & Garden, your ultimate destination for
               entertainment and leisure in Abuja. Enjoy live music, delicious
               traditional food, and exciting activities in a serene environment.
@@ -254,7 +254,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative bg-[#FAF3EB] px-4 py-10 md:px-8 md:py-20">
+      <div className="bg-primary relative px-4 py-10 md:px-8 md:py-20">
         <div className="wrap w-full text-center">
           <Copy>
             <h2 className="font-PPRegular mt-10 text-gray-800">Services</h2>
@@ -401,7 +401,7 @@ export default function Home() {
         ref={scaleImgRef}
         className="relative h-screen w-full overflow-hidden"
       >
-        <div className="absolute inset-0 flex items-center justify-center bg-[#FAF3EB]">
+        <div className="bg-primary absolute inset-0 flex items-center justify-center">
           <img
             src="/images/sticky-img.webp"
             alt="Scaling Image"

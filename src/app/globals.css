@@ -40,6 +40,13 @@ html.lenis body {
   --font-NHD: var(--font-neue-haas-display);
 }
 
+@theme {
+  --color-primary: #faf3eb;
+  --color-secondary: #314f29;
+  --color-tertiary: black;
+  /* --color-accent: #89402c; */
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
