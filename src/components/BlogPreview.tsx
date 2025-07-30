@@ -48,11 +48,11 @@ export default function BlogPreview({ post }: BlogPreviewProps) {
                 {post.title}
               </h5>
 
-              <div className="font-NHD mb-2 line-clamp-3 text-base text-stone-600 md:text-lg">
+              <div className="font-NHD mb-2 line-clamp-3 max-w-xl text-base text-stone-600 md:text-lg">
                 {post.body && <PortableText value={post.body.slice(0, 1)} />}
               </div>
             </div>
-            <span className="font-NHD mt-2 inline-block text-base text-lime-900">
+            <span className="font-NHD mt-4 inline-block text-base text-lime-900">
               Read more →
             </span>
           </div>

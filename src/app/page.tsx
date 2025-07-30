@@ -211,7 +211,7 @@ export default function Home() {
       </section>
       {/* Intro Section */}
       <section className="flex flex-col px-4 pt-10 md:px-8 md:pt-20">
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center text-balance">
           <Copy>
             <h1 className="text-secondary text-4xl md:text-6xl">
               <span className="font-PPRegular">Experience Paradise </span>
@@ -235,7 +235,7 @@ export default function Home() {
       <div ref={aboutRef} className="h-screen w-full">
         <div className="relative h-full p-4 py-24 md:px-8">
           <Image
-            src="/images/sticky-img.webp"
+            src="/images/chris-abney.webp"
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
@@ -247,7 +247,7 @@ export default function Home() {
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <p className="font-PPRegularUL pt-10 text-center text-4xl leading-tight text-white md:w-3/4 md:pt-20 md:text-6xl">
+              <p className="font-PPItalic pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-8xl">
                 A new standard of living at <br /> Eden Park & Garden
               </p>
             </div>
@@ -402,20 +402,21 @@ export default function Home() {
         className="relative h-screen w-full overflow-hidden"
       >
         <div className="bg-primary absolute inset-0 flex items-center justify-center">
-          <img
-            src="/images/sticky-img.webp"
-            alt="Scaling Image"
-            className="scale-image h-[50vh] w-[50vw] object-cover"
-          />
+          {/* Wrap image and overlay in one container */}
+          <div className="scale-image relative h-[50vh] w-[50vw]">
+            <img
+              src="/images/chris-abney.webp"
+              alt="Scaling Image"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-55"></div>
+          </div>
         </div>
+
         <div className="imgscaletxt absolute inset-0 z-10 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
-          <h4 className="font-PPRegularUL pt-10 text-4xl leading-tight text-white md:w-1/2 md:pt-20 md:text-6xl">
-            Relax or explore your <br />
-            very own personal playground
-          </h4>
-          {/* <h1 className="font-PPItalic w-1/2 pt-10 text-4xl text-white md:pt-20 md:text-6xl">
+          <h1 className="font-PPItalic max-w-7xl pt-10 text-4xl text-white md:pt-20 md:text-9xl">
             Enjoy The Night Life in Eden Garden
-          </h1> */}
+          </h1>
         </div>
       </div>
       <ManyServices />
@@ -450,16 +451,16 @@ export default function Home() {
           />
 
           {/* Background gradient overlay - behind the text */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-55"></div>
+          {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-55"></div> */}
           {/* Content sits above overlay */}
-          <div className="relative z-10 h-full w-full">
+          {/* <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
               <h4 className="font-PPRegularUL pt-10 text-center text-4xl leading-tight text-white md:w-1/2 md:pt-20 md:text-6xl">
                 Relax or explore your <br />
                 very own personal playground
               </h4>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <BookingForm />

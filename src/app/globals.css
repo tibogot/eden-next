@@ -70,7 +70,7 @@ h4 {
   @apply font-PPRegularUL text-4xl leading-tight md:text-6xl;
 }
 h5 {
-  @apply font-PPRegularUL text-3xl leading-tight md:text-4xl;
+  @apply font-PPRegular text-3xl leading-tight md:text-4xl;
 }
 /* p {
   @apply text-lg md:text-xl;
