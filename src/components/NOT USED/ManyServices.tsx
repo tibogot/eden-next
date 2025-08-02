@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import Copy from "./Copy3";
+import Copy from "./NOT USED/Copy3";
 
 interface Service {
   name: string;

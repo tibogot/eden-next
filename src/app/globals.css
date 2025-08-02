@@ -22,8 +22,6 @@ html.lenis body {
   pointer-events: none;
 }
 
-/* Custom fonts */
-
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -44,6 +42,7 @@ html.lenis body {
   --color-primary: #faf3eb;
   --color-secondary: #314f29;
   --color-tertiary: black;
+  --color-quaternary: #221f20;
   /* --color-accent: #89402c; */
 }
 
@@ -60,18 +59,20 @@ html.lenis body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-h2 {
-  @apply text-5xl leading-tight md:text-8xl;
+@layer base {
+  h2 {
+    @apply text-5xl leading-tight md:text-8xl;
+  }
+  h3 {
+    @apply text-4xl leading-tight md:text-6xl;
+  }
+  h4 {
+    @apply font-PPRegularUL text-4xl leading-tight md:text-6xl;
+  }
+  h5 {
+    @apply font-PPRegular text-3xl leading-tight md:text-4xl;
+  }
+  /* p {
+    @apply text-lg md:text-xl;
+  } */
 }
-h3 {
-  @apply text-4xl leading-tight md:text-6xl;
-}
-h4 {
-  @apply font-PPRegularUL text-4xl leading-tight md:text-6xl;
-}
-h5 {
-  @apply font-PPRegular text-3xl leading-tight md:text-4xl;
-}
-/* p {
-  @apply text-lg md:text-xl;
-} */

@@ -213,7 +213,7 @@ export default function Home() {
       <section className="flex flex-col px-4 pt-10 md:px-8 md:pt-20">
         <div className="flex flex-col items-center text-center text-balance">
           <Copy>
-            <h1 className="text-secondary text-4xl md:text-6xl">
+            <h1 className="text-4xl text-gray-800 md:text-6xl">
               <span className="font-PPRegular">Experience Paradise </span>
               {/* <br className="md:hidden" /> */}
               <span className="font-PPRegular">in </span>
@@ -223,7 +223,7 @@ export default function Home() {
             </h1>
           </Copy>
           <Copy>
-            <p className="font-NHD text-secondary mt-4 max-w-2xl py-4 text-lg md:py-8 md:text-xl">
+            <p className="font-NHD mt-4 max-w-2xl py-4 text-lg text-stone-500 md:py-8 md:text-xl">
               Welcome to Eden Park & Garden, your ultimate destination for
               entertainment and leisure in Abuja. Enjoy live music, delicious
               traditional food, and exciting activities in a serene environment.
@@ -243,12 +243,12 @@ export default function Home() {
           />
 
           {/* Background gradient overlay - behind the text */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-55"></div>
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-35"></div>
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">
-              <p className="font-PPItalic pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-8xl">
-                A new standard of living at <br /> Eden Park & Garden
+              <p className="font-PPItalic max-w-7xl pt-10 text-center text-4xl leading-tight text-white md:pt-20 md:text-9xl">
+                A new standard of living
               </p>
             </div>
           </div>
@@ -409,13 +409,13 @@ export default function Home() {
               alt="Scaling Image"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-55"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-35"></div>
           </div>
         </div>
 
         <div className="imgscaletxt absolute inset-0 z-10 flex flex-col items-center justify-center p-4 text-center opacity-0 blur-2xl md:p-8">
           <h1 className="font-PPItalic max-w-7xl pt-10 text-4xl text-white md:pt-20 md:text-9xl">
-            Enjoy The Night Life in Eden Garden
+            Eden Garden
           </h1>
         </div>
       </div>
