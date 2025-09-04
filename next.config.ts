@@ -17,11 +17,6 @@ const nextConfig: NextConfig = {
     // Define quality levels
     qualities: [50, 75, 90],
   },
-
-  // Enable experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 export default nextConfig;
