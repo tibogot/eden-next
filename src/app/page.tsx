@@ -14,6 +14,7 @@ import BlogPreview from "@/components/BlogPreview";
 import client from "@/sanityClient";
 import { useEffect, useState } from "react";
 import BookingForm from "@/components/BookingForm";
+import Testimonial from "@/components/Testimonial";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,19 +63,19 @@ export default function Home() {
       const triggers: ScrollTrigger[] = [];
 
       // About section sticky effect
-      const aboutSection = aboutRef.current;
-      if (aboutSection) {
-        const aboutTimeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: aboutSection,
-            start: "top top",
-            end: "bottom top",
-            pin: true,
-            pinSpacing: false,
-          },
-        });
-        triggers.push(aboutTimeline.scrollTrigger as ScrollTrigger);
-      }
+      // const aboutSection = aboutRef.current;
+      // if (aboutSection) {
+      //   const aboutTimeline = gsap.timeline({
+      //     scrollTrigger: {
+      //       trigger: aboutSection,
+      //       start: "top top",
+      //       end: "bottom top",
+      //       pin: true,
+      //       pinSpacing: false,
+      //     },
+      //   });
+      //   triggers.push(aboutTimeline.scrollTrigger as ScrollTrigger);
+      // }
 
       // Existing clip-path animations
       const images = gsap.utils.toArray<HTMLImageElement>(
@@ -420,7 +421,8 @@ export default function Home() {
         </div>
       </div>
       <ManyServices />
-      <ReviewsCarousel />
+      <Testimonial />
+      {/* <ReviewsCarousel /> */}
       {/* Blog Previews Section */}
       <section className="px-4 py-10 md:px-8 md:py-20">
         <Copy>
