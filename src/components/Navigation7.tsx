@@ -205,15 +205,15 @@ const Menu = () => {
       >
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src={isHeroVariant ? "/navlogo.svg" : "/navlogo2.svg"}
+            src={isHeroVariant ? "/navlogo4.svg" : "/navlogo3.svg"}
             alt="Eden Park"
-            width={40}
+            width={108}
             height={40}
             priority
           />
-          <span className={`text-xl font-bold ${currentVariant.logoText}`}>
+          {/* <span className={`text-xl font-bold ${currentVariant.logoText}`}>
             Eden Park
-          </span>
+          </span> */}
         </Link>
 
         <div className="hidden items-center space-x-8 md:flex">
