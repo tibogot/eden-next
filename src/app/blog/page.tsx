@@ -1,6 +1,7 @@
 import client from "@/sanityClient";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function BlogPage() {
   const posts = await client.fetch(
@@ -27,11 +28,15 @@ export default async function BlogPage() {
             <Link href={`/blog/${post.slug.current}`} className="group block">
               {post.mainImage && (
                 <div className="relative h-56 w-full overflow-hidden bg-[#f3e7d8]">
-                  <img
+                  <Image
                     src={post.mainImage.asset.url}
                     alt={post.title}
-                    className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    quality={75}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                 </div>
               )}
