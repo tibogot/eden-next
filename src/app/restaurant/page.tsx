@@ -64,7 +64,6 @@ function restaurant() {
           fill
           sizes="(max-width: 768px) 100vw, 100vw"
           className="absolute top-0 left-0 z-0 h-full w-full object-cover"
-          priority
         />
       </section>
 
@@ -77,7 +76,6 @@ function restaurant() {
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="absolute top-0 left-0 z-0 h-full w-full object-cover"
-              priority
             />
           </div>
         </div>
