@@ -24,6 +24,9 @@ export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const heroParallaxRef = useRef<HTMLDivElement>(null);
   const [blogPosts, setBlogPosts] = useState<any[]>([]);
+  const [heroImageLoaded, setHeroImageLoaded] = useState(false);
+  const [aboutImageLoaded, setAboutImageLoaded] = useState(false);
+  const [stickyImageLoaded, setStickyImageLoaded] = useState(false);
 
   // Parallax effect for hero image (isolated from GSAP/useGSAP)
   useEffect(() => {
@@ -202,8 +205,13 @@ export default function Home() {
               fill
               className="object-cover"
               priority
+              onLoad={() => setHeroImageLoaded(true)}
             />
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-25"></div>
+            <div
+              className={`absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent transition-opacity duration-300 ${
+                heroImageLoaded ? "opacity-25" : "opacity-0"
+              }`}
+            />
           </div>
           <div className="absolute bottom-0 left-1/2 z-20 w-[90vw] -translate-x-1/2 md:w-[75vw]">
             <img src="/logo.svg" alt="Logo" className="h-auto w-full" />
@@ -240,10 +248,15 @@ export default function Home() {
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
+            onLoad={() => setAboutImageLoaded(true)}
           />
 
           {/* Background gradient overlay - behind the text */}
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-35"></div>
+          <div
+            className={`absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent transition-opacity duration-300 ${
+              aboutImageLoaded ? "opacity-35" : "opacity-0"
+            }`}
+          />
           {/* Content sits above overlay */}
           <div className="relative z-10 h-full w-full">
             <div className="flex h-full w-full items-center justify-center">

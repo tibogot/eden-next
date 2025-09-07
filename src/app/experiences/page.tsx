@@ -1,20 +1,28 @@
+"use client";
 import Copy from "@/components/Copy5";
 import ExperiencesCarouselGSAP from "@/components/ExperiencesCarouselGSAP2";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 function experiences() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className="wrapper bg-[#FAF3EB]">
-      <section className="relative h-svh w-full overflow-hidden px-4 py-10 md:px-8 md:py-10">
+      <section className="relative h-svh w-full overflow-hidden bg-gray-900 px-4 py-10 md:px-8 md:py-10">
         <Image
           src="/images/barmaid-exp.webp"
           alt="restaurant"
           fill
           priority
           className="absolute top-0 left-0 h-full w-full object-cover"
+          onLoad={() => setImageLoaded(true)}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent opacity-35"></div>
+        <div
+          className={`absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent transition-opacity duration-300 ${
+            imageLoaded ? "opacity-35" : "opacity-0"
+          }`}
+        />
 
         <div className="relative z-10 mb-12 flex h-full w-full flex-col items-start justify-end">
           {/* <p className="font-PPItalic mb-12 text-3xl text-white md:w-1/2">
