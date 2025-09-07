@@ -16,6 +16,8 @@ function experiences() {
           fill
           priority
           className="absolute top-0 left-0 h-full w-full object-cover"
+          sizes="100vw"
+          quality={90}
           onLoad={() => setImageLoaded(true)}
         />
         <div

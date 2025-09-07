@@ -18,6 +18,8 @@ const ppEditorialNew = localFont({
   ],
   variable: "--font-pp-editorial-new",
   display: "swap",
+  preload: true,
+  fallback: ["serif"],
 });
 const ppEditorialNewUL = localFont({
   src: [
@@ -29,6 +31,8 @@ const ppEditorialNewUL = localFont({
   ],
   variable: "--font-pp-editorial-new-ultralight",
   display: "optional",
+  preload: false,
+  fallback: ["serif"],
 });
 
 const ppEditorialNewItalic = localFont({
@@ -41,6 +45,8 @@ const ppEditorialNewItalic = localFont({
   ],
   variable: "--font-pp-editorial-new-italic",
   display: "optional",
+  preload: false,
+  fallback: ["serif"],
 });
 
 const neueHaasDisplay = localFont({
@@ -53,6 +59,8 @@ const neueHaasDisplay = localFont({
   ],
   variable: "--font-neue-haas-display",
   display: "swap",
+  preload: true,
+  fallback: ["sans-serif"],
 });
 
 export const metadata: Metadata = {

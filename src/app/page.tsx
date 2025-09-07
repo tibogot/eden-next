@@ -205,6 +205,8 @@ export default function Home() {
               fill
               className="object-cover"
               priority
+              sizes="100vw"
+              quality={90}
               onLoad={() => setHeroImageLoaded(true)}
             />
             <div
@@ -248,6 +250,8 @@ export default function Home() {
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
+            sizes="100vw"
+            quality={90}
             onLoad={() => setAboutImageLoaded(true)}
           />
 
@@ -461,6 +465,8 @@ export default function Home() {
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
+            sizes="100vw"
+            quality={90}
           />
 
           {/* Background gradient overlay - behind the text */}
