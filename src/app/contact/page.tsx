@@ -9,7 +9,7 @@ function contact() {
 
   return (
     <div>
-      <section className="relative h-svh w-full overflow-hidden bg-gray-900 px-4 py-10 md:px-8 md:py-10">
+      <section className="relative h-svh w-full overflow-hidden px-4 py-10 md:px-8 md:py-10">
         <Image
           src="/images/contact-bg.webp"
           alt="Contact Background"
