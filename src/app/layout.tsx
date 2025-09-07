@@ -11,7 +11,7 @@ import Menu from "@/components/Navigation7";
 const ppEditorialNew = localFont({
   src: [
     {
-      path: "../fonts/PPEditorialNew-Regular.otf",
+      path: "../fonts/PPEditorialNew-Regular.woff2",
       weight: "400",
       style: "normal",
     },
@@ -22,31 +22,31 @@ const ppEditorialNew = localFont({
 const ppEditorialNewUL = localFont({
   src: [
     {
-      path: "../fonts/PPEditorialNew-Ultralight.otf",
+      path: "../fonts/PPEditorialNew-Ultralight.woff2",
       weight: "400",
       style: "normal",
     },
   ],
   variable: "--font-pp-editorial-new-ultralight",
-  display: "swap",
+  display: "optional",
 });
 
 const ppEditorialNewItalic = localFont({
   src: [
     {
-      path: "../fonts/PPEditorialNew-Italic.otf",
+      path: "../fonts/PPEditorialNew-Italic.woff2",
       weight: "400",
       style: "normal",
     },
   ],
   variable: "--font-pp-editorial-new-italic",
-  display: "swap",
+  display: "optional",
 });
 
 const neueHaasDisplay = localFont({
   src: [
     {
-      path: "../fonts/NeueHaasDisplay-Roman.ttf",
+      path: "../fonts/NeueHaasDisplay-Roman.woff",
       weight: "400",
       style: "normal",
     },
@@ -68,6 +68,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/PPEditorialNew-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/NeueHaasDisplay-Roman.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={` ${ppEditorialNew.variable} ${ppEditorialNewUL.variable} ${ppEditorialNewItalic.variable} ${neueHaasDisplay.variable} antialiased`}
