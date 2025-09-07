@@ -30,8 +30,6 @@ html.lenis body {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --font-PPRegular: var(--font-pp-editorial-new);
   --font-PPRegularUL: var(--font-pp-editorial-new-ultralight);
   --font-PPItalic: var(--font-pp-editorial-new-italic);

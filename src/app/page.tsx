@@ -240,7 +240,6 @@ export default function Home() {
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
-            priority
           />
 
           {/* Background gradient overlay - behind the text */}
@@ -449,7 +448,6 @@ export default function Home() {
             alt="Drone terrain background"
             fill
             className="object-cover object-center"
-            priority
           />
 
           {/* Background gradient overlay - behind the text */}

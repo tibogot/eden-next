@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -8,16 +7,6 @@ import LenisProvider from "@/components/LenisProvider";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Menu from "@/components/Navigation7";
 // import ScrollProgress from "@/components/ScrollProgress";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const ppEditorialNew = localFont({
   src: [
@@ -81,7 +70,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} ${ppEditorialNew.variable} ${ppEditorialNewUL.variable} ${ppEditorialNewItalic.variable} ${neueHaasDisplay.variable} antialiased`}
+        className={` ${ppEditorialNew.variable} ${ppEditorialNewUL.variable} ${ppEditorialNewItalic.variable} ${neueHaasDisplay.variable} antialiased`}
       >
         <LenisProvider>
           <ScrollToTop />
