@@ -225,7 +225,7 @@ export default function Home() {
         <div className="flex flex-col items-center text-center text-balance">
           <Copy>
             <h1 className="text-4xl text-gray-800 md:text-6xl">
-              <span className="font-PPRegular">Experience Paradise </span>
+              <span className="font-PPRegular">Experience Par </span>
               {/* <br className="md:hidden" /> */}
               <span className="font-PPRegular">in </span>
               <span className="font-PPItalic">every sip </span>
