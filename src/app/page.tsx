@@ -257,7 +257,7 @@ export default function Home() {
 
           {/* Background gradient overlay - behind the text */}
           <div
-            className={`absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent transition-opacity duration-300 ${
+            className={`absolute inset-0 z-10 bg-linear-to-b from-black to-transparent transition-opacity duration-300 ${
               aboutImageLoaded ? "opacity-35" : "opacity-0"
             }`}
           />
@@ -426,7 +426,7 @@ export default function Home() {
               alt="Scaling Image"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-35"></div>
+            <div className="absolute inset-0 bg-linear-to-b from-black to-transparent opacity-35"></div>
           </div>
         </div>
 
