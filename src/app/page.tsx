@@ -210,7 +210,7 @@ export default function Home() {
               onLoad={() => setHeroImageLoaded(true)}
             />
             <div
-              className={`absolute inset-0 z-10 bg-gradient-to-b from-black to-transparent transition-opacity duration-300 ${
+              className={`absolute inset-0 z-10 bg-linear-to-b from-black to-transparent transition-opacity duration-300 ${
                 heroImageLoaded ? "opacity-25" : "opacity-0"
               }`}
             />
@@ -225,7 +225,7 @@ export default function Home() {
         <div className="flex flex-col items-center text-center text-balance">
           <Copy>
             <h1 className="text-4xl text-gray-800 md:text-6xl">
-              <span className="font-PPRegular">Experience Par </span>
+              <span className="font-PPRegular">Experience Paradise </span>
               {/* <br className="md:hidden" /> */}
               <span className="font-PPRegular">in </span>
               <span className="font-PPItalic">every sip </span>
