@@ -44,8 +44,8 @@ const ppEditorialNewItalic = localFont({
     },
   ],
   variable: "--font-pp-editorial-new-italic",
-  display: "optional",
-  preload: false,
+  display: "swap",
+  preload: true,
   fallback: ["serif"],
 });
 
@@ -76,22 +76,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/PPEditorialNew-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/NeueHaasDisplay-Roman.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body
         suppressHydrationWarning
         className={` ${ppEditorialNew.variable} ${ppEditorialNewUL.variable} ${ppEditorialNewItalic.variable} ${neueHaasDisplay.variable} antialiased`}

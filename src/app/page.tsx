@@ -66,19 +66,19 @@ export default function Home() {
       const triggers: ScrollTrigger[] = [];
 
       // About section sticky effect
-      // const aboutSection = aboutRef.current;
-      // if (aboutSection) {
-      //   const aboutTimeline = gsap.timeline({
-      //     scrollTrigger: {
-      //       trigger: aboutSection,
-      //       start: "top top",
-      //       end: "bottom top",
-      //       pin: true,
-      //       pinSpacing: false,
-      //     },
-      //   });
-      //   triggers.push(aboutTimeline.scrollTrigger as ScrollTrigger);
-      // }
+      const aboutSection = aboutRef.current;
+      if (aboutSection) {
+        const aboutTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: aboutSection,
+            start: "top top",
+            end: "bottom top",
+            pin: true,
+            pinSpacing: false,
+          },
+        });
+        triggers.push(aboutTimeline.scrollTrigger as ScrollTrigger);
+      }
 
       // Existing clip-path animations
       const images = gsap.utils.toArray<HTMLImageElement>(
